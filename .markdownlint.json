@@ -1,0 +1,26 @@
+{
+  "MD004": {
+    "style": "dash"
+  },
+  "MD013": false,
+  "MD033": {
+    "allowed_elements": ["image"]
+  },
+  "MD044": {
+    "names": [
+      "VScode",
+      "Github",
+      "JavaScript",
+      "React"
+    ]
+  },
+  "MD048": {
+    "style": "backtick"
+  },
+  "MD049": {
+    "style": "asterisk"
+  },
+  "MD050": {
+    "style": "asterisk"
+  }
+}
