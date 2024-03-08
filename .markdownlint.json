@@ -4,14 +4,22 @@
   },
   "MD013": false,
   "MD033": {
-    "allowed_elements": ["image"]
+    "allowed_elements": ["image", "sup", "u"]
   },
   "MD044": {
     "names": [
       "VScode",
       "Github",
       "JavaScript",
-      "React"
+      "ECMAScript",
+      "jQuery",
+      ".js",
+      "React",
+      "React.js",
+      "Node",
+      "Node.js",
+      "DOM",
+      "BOM"
     ]
   },
   "MD048": {

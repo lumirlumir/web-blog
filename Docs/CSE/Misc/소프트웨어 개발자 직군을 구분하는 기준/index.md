@@ -10,9 +10,9 @@
 
 익혀야 할 기술들은 아래와 같다.
 
-- 화면 및 데이터 처리: `C# Winform`, `C# WPF`, `JAVA SWING`, `Win32API`, `Delphi`, `Visual Basic`, `Python QT GUI`, `Power Builder`
-- RDBMS: `Oracle`, `MSSQL`, `MariaDB`
-- Grid Component: `Chart FX`, `DevExpress`, `C1 Component`
+- 화면 및 데이터 처리: ***C# Winform***, ***C# WPF***, ***JAVA SWING***, ***Win32API***, ***Delphi***, ***Visual Basic***, ***Python QT GUI***, ***Power Builder***
+- RDBMS: ***Oracle***, ***MSSQL***, ***MariaDB***
+- Grid Component: ***Chart FX***, ***DevExpress***, ***C1 Component***
 
 ### 1-2. 웹(Web) 소프트웨어 개발자
 
@@ -20,13 +20,13 @@
 
 익혀야 할 기술들은 아래와 같다.
 
-- Front-End(Client) 언어(화면 및 데이터 처리): `HTML`, `CSS`, `JavaScript`, `JSON(JavaScript Object Notation)`, `AJAX(Asynchronous JavaScript And XML)`
-- Front-End(Client) Framework: `Vue`, `React`, `Angular`, `Jquery`, `Semantic-UI`
-- Back-End(Server) 언어: `JSP/Servlet`, `PHP`, `ASP.NET(C#)`, `Python(Django)`
-- Back-End(Server) Framework: `Node.js(JavaScript)`, `Django(Python)`, `Spring(Java)`, `Laravel(PHP)`, `Rails(Ruby)`
-- 웹 서버(Web Server): `IIS(Internet Information Services)`, `Apache Tomcat`, `Apache`
-- RDBMS: `Oracle`, `MSSQL`, `MariaDB`
-- Grid Component: `Chart FX`, `DevExpress`, `ComponentOne`
+- Front-End(Client) 언어(화면 및 데이터 처리): ***HTML***, ***CSS***, ***JavaScript***, ***JSON(JavaScript Object Notation)***, ***AJAX(Asynchronous JavaScript And XML)***
+- Front-End(Client) Framework: ***Vue***, ***React***, ***Angular***, ***jQuery***, ***Semantic-UI***
+- Back-End(Server) 언어: ***JSP/Servlet***, ***PHP***, ***ASP.NET(C#)***, ***Python(Django)***
+- Back-End(Server) Framework: ***Node.js(JavaScript)***, ***Django(Python)***, ***Spring(Java)***, ***Laravel(PHP)***, ***Rails(Ruby)***
+- 웹 서버(Web Server): ***IIS(Internet Information Services)***, ***Apache Tomcat***, ***Apache***
+- RDBMS: ***Oracle***, ***MSSQL***, ***MariaDB***
+- Grid Component: ***Chart FX***, ***DevExpress***, ***ComponentOne***
 
 ### 1-3. 앱(App) 소프트웨어 개발자
 
@@ -34,9 +34,9 @@
 
 익혀야 할 기술들은 아래와 같다.
 
-- Android: `Java`, `Kotlin(코틀린)`
+- Android: ***Java***, ***Kotlin(코틀린)***
   - 2개 중에 1개만 하면 된다.
-- iOS: `Objective-C(오브젝티브-C)`, `Swift(스위프트)`
+- iOS: ***Objective-C(오브젝티브-C)***, ***Swift(스위프트)***
   - 2개 중에 1개만 하면 된다.
   - 맥(Mac)이 있어야 개발 환경을 구축 할 수 있다.
 
@@ -46,8 +46,8 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 익혀야 할 기술들은 아래와 같다.
 
-- 윈도우 화면 및 데이터 처리: `Win32API`, `Visual C++`, `.NET`, `Delphi`, `C++ QT`
-- Console 화면 및 데이터 처리: `Assembly Language`, `C`, `C++`
+- 윈도우 화면 및 데이터 처리: ***Win32API***, ***Visual C++***, ***.NET***, ***Delphi***, ***C++ QT***
+- Console 화면 및 데이터 처리: ***Assembly Language***, ***C***, ***C++***
 
 ### 1-5. 게임 소프트웨어 개발자
 
@@ -55,8 +55,8 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 익혀야 할 기술들은 아래와 같다.
 
-- 유니티(UNITY) 환경: `C#`, `유니티 엔진`
-- 콘솔(게임기) 환경: `WIN32API`, `DirectX 프로그래밍`, `Open GL`
+- 유니티(UNITY) 환경: ***C#***, ***유니티 엔진***
+- 콘솔(게임기) 환경: ***WIN32API***, ***DirectX 프로그래밍***, ***Open GL***
 
 > 유니티 엔진이 나오기 전까지는 순수 상업용 게임을 개발하려면 WIN32API, Direct X 프로그래밍, Open GL 프로그래밍을 했어야 했다.
 >
@@ -70,9 +70,9 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 익혀야 할 기술들은 아래와 같다.
 
-- 윈도우 화면 및 데이터 처리: `C# TCP/IP Socket`, `C# Serial Bus`, `Java Socket`, `Delphi Socket`, `Win32API`, `WinSock`, `Visual C++`, `.NET`, `WinSock`
-- Console 화면 및 데이터 처리: `C Socket`, `C++ Socket`, `C# TCP/IP Socket`, `C# Serial Bus`, `Java Socket`
-- 솔루션: `Zero MQ(Message Queue)`, `IBM MQ(Message Queue)`, `Apache Active MQ(Message Queue)`, `Rabbit MQ(Message Queue)`
+- 윈도우 화면 및 데이터 처리: ***C# TCP/IP Socket***, ***C# Serial Bus***, ***Java Socket***, ***Delphi Socket***, ***Win32API***, ***WinSock***, ***Visual C++***, ***.NET***, ***WinSock***
+- Console 화면 및 데이터 처리: ***C Socket***, ***C++ Socket***, ***C# TCP/IP Socket***, ***C# Serial Bus***, ***Java Socket***
+- 솔루션: ***Zero MQ(Message Queue)***, ***IBM MQ(Message Queue)***, ***Apache Active MQ(Message Queue)***, ***Rabbit MQ(Message Queue)***
 
 ### 2-2. 데이터베이스 소프트웨어 개발자
 
@@ -80,9 +80,9 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 익혀야 할 기술들은 아래와 같다.
 
-- 윈도우 화면 및 데이터 처리: `Power Builder`, `C# Winform`, `C# WPF`, `C# ADO.NET 기능 사용`, `JAVA SWING에 JDBC 기능 사용`, `Delphi DataBase Component`
-- RDBMS: `Oracle`, `MSSQL`, `MariaDB`
-- BigData: `Python`, `R`, `MongoDB`
+- 윈도우 화면 및 데이터 처리: ***Power Builder***, ***C# Winform***, ***C# WPF***, ***C# ADO.NET 기능 사용***, ***JAVA SWING에 JDBC 기능 사용***, ***Delphi DataBase Component***
+- RDBMS: ***Oracle***, ***MSSQL***, ***MariaDB***
+- BigData: ***Python***, ***R***, ***MongoDB***
 
 ### 2-3. 솔루션(제품) 소프트웨어 개발자
 
@@ -98,11 +98,11 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 익혀야 할 기술들은 아래와 같다.
 
-- 인공지능 기본이론: `Deep Learning(심층 학습)`, `Machine Learning(기계 학습)`
-- 컴퓨터언어: `Python Basic`, `Python Library`
-- 수학: `통계학`, `선형대수학`
-- 인공지능 Library: `파이토치(PyTorch)`, `텐서플로(Tensorflow)`, `케라스(Keras)`
-- 컴퓨터 공학 지식: `소프트웨어 공학`, `알고리즘`, `자료구조`
+- 인공지능 기본이론: ***Deep Learning(심층 학습)***, ***Machine Learning(기계 학습)***
+- 컴퓨터언어: ***Python Basic***, ***Python Library***
+- 수학: ***통계학***, ***선형대수학***
+- 인공지능 Library: ***파이토치(PyTorch)***, ***텐서플로(Tensorflow)***, ***케라스(Keras)***
+- 컴퓨터 공학 지식: ***소프트웨어 공학***, ***알고리즘***, ***자료구조***
 
 ### 2-6. 블록체인(Block Chain) 개발자
 
@@ -110,11 +110,11 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 익혀야 할 기술들은 아래와 같다.
 
-- 컴퓨터 관련 지식: `프로그래밍 언어`, `네트워크`, `데이터베이스`, `서버`, `디지털보안`, `자료구조`, `알고리즘` 등
-- 프로그래밍 언어: `C++`, `GO`, `JavaScript`, `Solidity`
+- 컴퓨터 관련 지식: ***프로그래밍 언어***, ***네트워크***, ***데이터베이스***, ***서버***, ***디지털보안***, ***자료구조***, ***알고리즘*** 등
+- 프로그래밍 언어: ***C++***, ***GO***, ***JavaScript***, ***Solidity***
 - 암호화 지식
-  - 대칭키(비공개키): `DES`, `3DES`, `AES`, `SEED`, `HIGHT`, `IDEA`, `RC5`, `ARIA`
-  - 비대칭키(공개키): `Diffie-Hellman 키 교환`, `DSS`, `ElGamal`, `ECC`, `RSA`
+  - 대칭키(비공개키): ***DES***, ***3DES***, ***AES***, ***SEED***, ***HIGHT***, ***IDEA***, ***RC5***, ***ARIA***
+  - 비대칭키(공개키): ***Diffie-Hellman 키 교환***, ***DSS***, ***ElGamal***, ***ECC***, ***RSA***
 - 금융경제의 흐름과 동향 파악을 하는 역량
 
 ### 2-7. SAP ABAP 소프트웨어 개발자
