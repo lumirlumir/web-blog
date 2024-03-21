@@ -24,9 +24,10 @@
  ┃ ┃ ┃ ┗ 📂YAML
  ┃ ┣ 📂DEV Tools
  ┃ ┃ ┣ 📂Git
- ┃ ┃ ┃ ┣ 📂Github Workflows
- ┃ ┃ ┃ ┣ 📂Gitkeep
- ┃ ┃ ┃ ┗ 📂Lectures
+ ┃ ┃ ┃ ┣ 📂Github
+ ┃ ┃ ┃ ┣ 📂GithubIssues
+ ┃ ┃ ┃ ┣ 📂GithubWorkflows
+ ┃ ┃ ┃ ┗ 📂Gitkeep
  ┃ ┃ ┗ 📂VScode
  ┃ ┣ 📂Framework
  ┃ ┃ ┗ 📂Node.js
