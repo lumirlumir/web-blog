@@ -47,7 +47,7 @@
 
 #### 2-1-1. ATX style
 
-글머리는 1~6까지 지원한다. (`<h1>`~`<h6>`)
+글머리는 1-6까지 지원한다. (`<h1>`-`<h6>`)
 
 `#`으로 시작한다.
 
@@ -82,7 +82,7 @@
 
 #### 2-1-2. Closed ATX style
 
-글머리는 1~6까지 지원한다. (`<h1>`~`<h6>`)
+글머리는 1-6까지 지원한다. (`<h1>`-`<h6>`)
 
 `#`으로 시작하고, `#`으로 끝난다.
 
@@ -117,7 +117,7 @@
 
 #### 2-1-3. Setext style
 
-글머리는 1~2까지만 지원한다. (`<h1>`~`<h2>`)
+글머리는 1-2까지만 지원한다. (`<h1>`-`<h2>`)
 
 `=`과 `-`를 이용한다.
 
@@ -843,17 +843,13 @@
 
 - 입력
 
-  <pre>
-  <code>
-  ```java
+  <pre><code>```java
   public class BootSpringBootApplication {
     public static void main(String[] args) {
       System.out.println("Hello World!");
     }
   }
-  ```
-  </code>
-  </pre>
+  ```</code></pre>
 
 - 출력
 
@@ -923,15 +919,11 @@
 
 - 출력
 
-  <pre>
-  <code>
-  public class BootSpringBootApplication {
+  <pre><code>public class BootSpringBootApplication {
     public static void main(String[] args) {
       System.out.println("Hello World!");
     }
-  }
-  </code>
-  </pre>
+  }</code></pre>
 
 ### 2-11. Backslash(`\`) Escapes
 
@@ -983,8 +975,6 @@
   \[square brackets\]
 
   \|vertical bar\|
-
-  \$dollar sign\$
   ```
 
 - 출력
@@ -996,8 +986,6 @@
   \[square brackets\]
 
   \|vertical bar\|
-
-  \$dollar sign\$
 
 ### 2-12. 표(Table)
 
@@ -1015,7 +1003,7 @@
 
 - 입력
 
-  ```markdown
+  ```text
   테이블 생성
 
   |헤더1|헤더2|헤더3|헤더4|
