@@ -3,8 +3,9 @@
     "style": "dash"
   },
   "MD013": false,
+  "MD014": false,
   "MD033": {
-    "allowed_elements": ["image", "sup", "u"]
+    "allowed_elements": ["image", "sup", "u", "code"]
   },
   "MD044": {
     "names": [
@@ -30,5 +31,6 @@
   },
   "MD050": {
     "style": "asterisk"
-  }
+  },
+  "MD056": false
 }
