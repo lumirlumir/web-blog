@@ -843,13 +843,15 @@
 
 - 입력
 
-  <pre><code>```java
+  ````text
+  ```java
   public class BootSpringBootApplication {
     public static void main(String[] args) {
       System.out.println("Hello World!");
     }
   }
-  ```</code></pre>
+  ```
+  ````
 
 - 출력
 
