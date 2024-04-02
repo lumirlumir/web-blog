@@ -18,6 +18,16 @@
 
 `console.log()`는 요소를 ***HTML***과 같은 트리 구조로 출력 하고, ***DOM*** 요소에 대해 특별한 처리를 제공한다.
 
+### 1-4. 서식 문자
+
+`console.log()`에서는 서식 문자를 이용해 문자열을 출력할 수 있다.
+
+서식 문자 | 설명 | 예시
+--- | --- | ---
+`%d` | 숫자 | `console.log('Number: %d', 273);`
+`%s` | 문자열 | `console.log('String: %s', 'hi~');`
+`%j` | JSON | `console.log('Json: %j', {name:'jay'});`
+
 ## 2. `console.dir()`
 
 ### 2-1. 정의
