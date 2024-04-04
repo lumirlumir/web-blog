@@ -1,5 +1,7 @@
 # 바벨(Babel 7) 기본 사용법
 
+> `@babel/core`, `@babel/cli`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`
+
 개발자들이 실행 환경에 구애받지 않고 항상 최신 문법의 자바스크립트로 코딩할 수 있도록 도와주는 유용한 도구인 바벨(Babel)에 대해 알아보자.
 
 ## 1. 자바스크립트 개발자의 딜레마
@@ -154,7 +156,7 @@ $ npx babel src -d dist
 
 Babel 커맨드를 자주 사용하는 상황이라면, NPM 스크립트로 등록해두고 사용하는게 편할 것이다.
 
-```json
+```javascript
 /* package.json */
 
 {
