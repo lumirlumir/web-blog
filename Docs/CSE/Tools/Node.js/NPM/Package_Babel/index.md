@@ -1,8 +1,6 @@
-# 바벨(Babel 7) 기본 사용법
+# NPM Package Babel: `@babel/core`, `@babel/cli`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`
 
-> `@babel/core`, `@babel/cli`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`
-
-개발자들이 실행 환경에 구애받지 않고 항상 최신 문법의 자바스크립트로 코딩할 수 있도록 도와주는 유용한 도구인 바벨(Babel)에 대해 알아보자.
+개발자들이 실행 환경에 구애받지 않고 항상 최신 문법의 자바스크립트로 코딩할 수 있도록 도와주는 유용한 도구인 바벨(Babel)에 대해 알아보자. 아래 내용들은 Babel 7 기반의 설명들이다.
 
 ## 1. 자바스크립트 개발자의 딜레마
 

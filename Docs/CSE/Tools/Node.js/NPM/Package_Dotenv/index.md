@@ -1,6 +1,6 @@
-# dotenv로 환경 변수를 `.env` 파일로 관리하기
+# NPM Package Dotenv: `dotenv`, `dotenv-webpack`
 
-> `dotenv`, `dotenv-webpack`
+`dotenv`를 통해 환경 변수를 `.env` 파일로 관리하는 방법에 대해 알아보자.
 
 환경 변수(Environment Variables)란, 프로세스가 컴퓨터에서 동작하는 방식에 영향을 미치는 동적인 값들의 모임이다. 즉, OS 입장에서 특정 프로세스를 실행하기 위해 참조하는 변수들이다.
 
@@ -10,7 +10,7 @@
 
 ## 1. `dotenv` 패키지 설치
 
-npm 패키지 매니저를 이용하여 `dotenv` 라이브러리를 Node.js 프로젝트에 설치한다.
+npm 패키지 매니저를 이용하여 `dotenv` 라이브러리를 `dependencies`로 Node.js 프로젝트에 설치한다.
 
 ```bash
 $ npm i dotenv
