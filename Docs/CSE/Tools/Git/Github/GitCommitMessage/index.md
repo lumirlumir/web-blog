@@ -66,17 +66,17 @@ See also(Ref, Related to): #IssueNo, ... (참고한 이슈, 생략 가능)
 
 어떤 ***Issues***에서 왔는지 등의 참조 정보들을 추가하는 용도로 사용한다. 예를 들어, 특정 ***Issues***를 참조하려면 `Resolves: #1137` 와 같이 작성한다.
 
-### 3. Commit Message 여러 줄 입력
+## 3. Commit Message 여러 줄 입력
 
 `-m` 옵션을 사용한다. 이는 ***vim***에서 별도의 메세지를 작성할 필요없이, 명령창에서 바로 인라인 형식으로 Commit Message를 작성할 수 있게 해준다.
 
-#### 3-1. 한 줄
+### 3-1. 한 줄
 
 ```bash
 $ git commit -m "Commit Message"
 ```
 
-#### 3-2. 여러 줄
+### 3-2. 여러 줄
 
 Commit Message의 첫 줄에 '닫는 따옴표'를 넣지 말고, 마지막 줄에 사용한다. 즉, 첫 줄에 '여는 따옴표'만을 넣고 엔터를 누르면 개행이 되며, 저장되는 것이 아니라 계속해서 입력 가능하다.
 
@@ -88,7 +88,7 @@ $ git commit -m "Commit Message 1st Line
 > Commit Message Last Line"
 ```
 
-### 4. Commit Message 예시
+## 4. Commit Message 예시
 
 ```bash
 $ git commit -m "fix: Safari에서 모달을 띄웠을 때 스크롤 이슈 수정
