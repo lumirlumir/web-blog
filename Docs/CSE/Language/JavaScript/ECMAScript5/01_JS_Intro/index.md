@@ -1,4 +1,4 @@
-# 01_자바스크립트(***JavaScript***)의 개요
+# 자바스크립트(***JavaScript***)의 개요
 
 자바스크립트(***JavaScript***)가 처음 등장했을 때는 웹 브라우저(클라이언트)측에서 데이터 유효성 검사 등을 담당하는 스크립트 언어에 불과했다.
 
@@ -10,13 +10,13 @@
 
 ### ***ECMAScript***
 
-ECMA는 European Computer Manufacturer's Association의 줄임말이며, 정보와 통신 시스템을 위한 국제 표준화 기구이다. (현재는 ECMA International로 이름을 바꿈) ***ECMAScript***는 ***JavaScript***와 같은 스크립트 언어의 표준을 말한다.***JavaScript***는 ***ECMAScript*** 기반의 가장 인기 있는 언어로 알려져 있다.
+ECMA는 European Computer Manufacturer's Association의 줄임말이며, 정보와 통신 시스템을 위한 국제 표준화 기구이다. (현재는 ECMA International로 이름을 바꿈.) ***ECMAScript***는 ***JavaScript***와 같은 스크립트 언어의 표준을 말한다. ***JavaScript***는 ***ECMAScript*** 기반의 가장 인기 있는 언어로 알려져 있다.
 
 ### ***JavaScript***
 
-***JavaScript***의 처음 개발 목적은 Netscape 웹 브라우저에서 동적인 요소를 구현하기 위함이었다. 그 후 다른 여러 웹 브라우저들 또한 ***JavaScript***를 탑재하기 시작했고, 다양한 브라우저에서***JavaScript***가 공통되게 작동할 수 있도록 표준 규격이 필요해졌다. 이 때문에 ECMA에서 스크립트 표준을 만든 것이다.***JavaScript***는 ***ECMAScript*** 사양을 준수하는 범용 스크립트 언어이며, 이 같은 표준 스크립트 언어를 ***ECMAScript***라고 한다.
+***JavaScript***의 처음 개발 목적은 Netscape 웹 브라우저에서 동적인 요소를 구현하기 위함이었다. 그 후 다른 여러 웹 브라우저들 또한 ***JavaScript***를 탑재하기 시작했고, 다양한 브라우저에서 ***JavaScript***가 공통되게 작동할 수 있도록 표준 규격이 필요해졌다. 이 때문에 ECMA에서 스크립트 표준을 만든 것이다. ***JavaScript***는 ***ECMAScript*** 사양을 준수하는 범용 스크립트 언어이며, 이 같은 표준 스크립트 언어를 ***ECMAScript***라고 한다.
 
-즉, ***ECMAScript***는 스크립팅 언어를 어떻게 만들어야 하는지 설명하는 일종의 설명서라 생각하면 되고, ***JavaScript***는 ***ECMAScript***의 사양을 바탕으로 만들어진 언어인 것이다.
+즉, ***ECMAScript***는 스크립트 언어를 어떻게 만들어야 하는지 설명하는 일종의 설명서라 생각하면 되고, ***JavaScript***는 ***ECMAScript***의 사양을 바탕으로 만들어진 언어인 것이다.
 
 ## Reference
 
