@@ -178,4 +178,5 @@ console.log(myPath);
 
 ## Reference
 
+- <https://nodejs.org/api/path.html>
 - <https://defineall.tistory.com/655>

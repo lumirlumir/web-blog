@@ -191,4 +191,5 @@ Successfully compiled 2 files with Babel.
 
 ## Reference
 
+- <https://babel.dev/docs/>
 - <https://www.daleseo.com/js-babel/>

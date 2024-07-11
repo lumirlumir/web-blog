@@ -30,4 +30,5 @@ DOM에서 `react`를 사용하기 위한 라이브러리이다. 웹 인터페이
 
 ## Reference
 
+- <https://react.dev/>
 - <https://medium.com/programming-sage/react-vs-react-dom-a0ed3aea9745>
