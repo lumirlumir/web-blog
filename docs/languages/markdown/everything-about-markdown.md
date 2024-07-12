@@ -748,8 +748,8 @@
 
 - 출력
 
-  ![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true)
-  ![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck")
+  ![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true)
+  ![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck")
 
 ##### 2-9-1-2. 참조 이미지
 
@@ -779,8 +779,8 @@
   ![석촌호수 러버덕][Ref1]
   ![석촌호수 러버덕][Ref2]
 
-  [Ref1]: https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true
-  [Ref2]: https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck"
+  [Ref1]: https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true
+  [Ref2]: https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck"
 
 ##### 2-9-1-3. 이미지에 링크 추가
 
@@ -793,7 +793,7 @@
   ```
 
 - 출력
-  [![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck Wiki")](https://en.wikipedia.org/wiki/Rubber_duck)
+  [![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck Wiki")](https://en.wikipedia.org/wiki/Rubber_duck)
 
 #### 2-9-2. HTML style
 
@@ -808,8 +808,8 @@
 
 - 출력
 
-  <img src="https://Github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br>
-  <img src="https://Github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
+  <img src="https://Github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br>
+  <img src="https://Github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/1.png?raw=true" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
 
 ### 2-10. 코드(Codes)
 

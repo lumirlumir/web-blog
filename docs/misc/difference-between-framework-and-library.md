@@ -1,4 +1,4 @@
-# 프레임워크 vs 라이브러리
+# 프레임워크와 라이브러리의 차이점
 
 프레임워크(Framework)와 라이브러리(Library)의 차이점은 무엇일까? 많은 사람들이 이 둘을 혼동하며, 심지어 같은 의미로 사용하기도 한다. 둘 다 미리 만들어 놓은 재사용 가능한 코드 집합이라는 공통점이 있지만, 둘 사이에는 분명한 차이점이 존재한다. 프레임워크는 단지 미리 만들어 둔 반제품이나 확장 가능한 추상 라이브러리 집합이 아니다. 프레임워크가 무엇인지 이해하려면 라이브러리와 어떻게 다른지 그 차이를 알아야 한다. 먼저 프레임워크와 라이브러리의 개념에 대해 살펴보자.
 
@@ -13,7 +13,7 @@
 ### 1-1. 특징
 
 - 특정 개념들의 추상화를 제공하는 여러 클래스나 컴포넌트들로 구성된다.
-- 컴포넌트들은 재사용이 가능하다.  
+- 컴포넌트들은 재사용이 가능하다.
 - 높은 수준에서 패턴들을 조작화 할 수 있다.
 
 ### 1-2. 장점
@@ -54,7 +54,7 @@
 
 ### 2-2. ***React.js***는 프레임워크가 아닌가?
 
-![React 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/misc/difference-between-framework-and-library/1.png?raw=true)
+![React 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/misc/difference-between-framework-and-library/1.png?raw=true)
 
 ***React***는 프론트엔드 라이브러리이며 프레임워크가 아니다. 하지만, 많은 개발자들이 프레임워크인 것처럼 언급하고 비교한다. 프레임워크의 중요한 특징 중 하나는 바로 '제어의 역전'이다.
 
@@ -70,7 +70,7 @@
 
 ### 2-3. 그럼 ***Express.js***는?
 
-![Express Node.js를 위한 빠르고 개방적인 간결한 웹 프레임워크](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/misc/difference-between-framework-and-library/2.png?raw=true)
+![Express Node.js를 위한 빠르고 개방적인 간결한 웹 프레임워크](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/misc/difference-between-framework-and-library/2.png?raw=true)
 
 홈페이지에 명시된 바와 같이 ***Express.js***는 웹 프레임워크이다. ***Node.js***의 견고한 비동기 통신 지원의 장점을 활용하여 가볍고 빠르며, 쉽게 적용 가능한 웹 앱과 REST API를 쓸 수 있다.
 
@@ -98,7 +98,7 @@
 
 ### 3-2. 요약
 
-![alt text](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/misc/difference-between-framework-and-library/3.png?raw=true)
+![alt text](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/misc/difference-between-framework-and-library/3.png?raw=true)
 
 Library | Framework
 :--- | :---
