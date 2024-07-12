@@ -60,7 +60,7 @@
   #### This is ATX style H4
   ##### This is ATX style H5
   ###### This is ATX style H6
-  ####### This is ATX style H7(지원되지 않음)
+  ####### This is ATX style H7 (지원되지 않음)
   ```
 
 - 출력
@@ -220,7 +220,7 @@
 
 ### 2-3. 수평선(Horizontal Rules)
 
-`-`, `_`, `*` 각 기호를 3개 이상 입력해, `<hr>` 태그로 변환되는 '수평선(Horizontal Rules)'을 표현한다.
+`-`, `_`, `*` 각 기호를 <u>3개 이상</u> 입력해, `<hr>` 태그로 변환되는 '수평선(Horizontal Rules)'을 표현한다.
 
 단, `-`를 사용할 경우, 제목(Headings)으로 인식할 수 있으니, 이전 라인은 비워두어야 한다.
 
@@ -748,8 +748,8 @@
 
 - 출력
 
-  ![석촌호수 러버덕](1.png)
-  ![석촌호수 러버덕](1.png "RubberDuck")
+  ![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true)
+  ![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck")
 
 ##### 2-9-1-2. 참조 이미지
 
@@ -779,8 +779,8 @@
   ![석촌호수 러버덕][Ref1]
   ![석촌호수 러버덕][Ref2]
 
-  [Ref1]: 1.png
-  [Ref2]: 1.png "RubberDuck"
+  [Ref1]: https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true
+  [Ref2]: https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck"
 
 ##### 2-9-1-3. 이미지에 링크 추가
 
@@ -793,7 +793,7 @@
   ```
 
 - 출력
-  [![석촌호수 러버덕](1.png "RubberDuck Wiki")](https://en.wikipedia.org/wiki/Rubber_duck)
+  [![석촌호수 러버덕](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck Wiki")](https://en.wikipedia.org/wiki/Rubber_duck)
 
 #### 2-9-2. HTML style
 
@@ -808,8 +808,8 @@
 
 - 출력
 
-  <img src="1.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br>
-  <img src="1.png" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
+  <img src="https://Github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br>
+  <img src="https://Github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/markdown/everything-about-markdown/1.png?raw=true" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
 
 ### 2-10. 코드(Codes)
 
@@ -1001,7 +1001,7 @@
 - `:---:`: 가운데 정렬
 - `---:`: 우측 정렬
 
-가장 좌측과 가장 우측에 있는 `|`(Vertical Bar) 기호는 생략 가능하다. (플랫폼에 따라 생략 불가능한 경우도 존재.)
+가장 좌측과 가장 우측에 있는 `|`(Vertical Bar) 기호는 생략 가능하다. (단, 플랫폼에 따라 생략 불가능한 경우도 존재.)
 
 - 입력
 
@@ -1069,7 +1069,7 @@
 
 체크 리스트 안에서 강조 외에 여러 기능을 사용할 수 있다.
 
-일반적으로, ***Github***를 비롯한 몇몇 플랫폼에서만 지원하는 기능이다. (모든 플랫폼에서 지원하는 기능이 아니다.)
+일반적으로, ***Github***를 비롯한 몇몇 플랫폼에서만 지원하는 기능이다. (모든 플랫폼에서 지원하는 기능은 아니다.)
 
 - 입력
 

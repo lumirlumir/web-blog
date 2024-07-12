@@ -21,9 +21,9 @@
 익혀야 할 기술들은 아래와 같다.
 
 - Front-End(Client) 언어(화면 및 데이터 처리): ***HTML***, ***CSS***, ***JavaScript***, ***JSON(JavaScript Object Notation)***, ***AJAX(Asynchronous JavaScript And XML)***
-- Front-End(Client) Framework: ***Vue***, ***React***, ***Angular***, ***jQuery***, ***Semantic-UI***
+- Front-End(Client) Library or Framework: ***React***, ***Vue***, ***Angular***, ***jQuery***, ***Semantic-UI***
 - Back-End(Server) 언어: ***JSP/Servlet***, ***PHP***, ***ASP.NET(C#)***, ***Python(Django)***
-- Back-End(Server) Framework: ***Node.js(JavaScript)***, ***Django(Python)***, ***Spring(Java)***, ***Laravel(PHP)***, ***Rails(Ruby)***
+- Back-End(Server) Library or Framework: ***Express.js(JavaScript)***, ***Django(Python)***, ***Spring(Java)***, ***Laravel(PHP)***, ***Rails(Ruby)***
 - 웹 서버(Web Server): ***IIS(Internet Information Services)***, ***Apache Tomcat***, ***Apache***
 - RDBMS: ***Oracle***, ***MSSQL***, ***MariaDB***
 - Grid Component: ***Chart FX***, ***DevExpress***, ***ComponentOne***
@@ -132,4 +132,4 @@ IoT 환경(소형 기계, 센서 등)에서의 실행 및 데이터 처리를 �
 
 ## Reference
 
-- 코딩 관련 유튜브 채널의 어느 한 댓글.
+- 코딩 관련 유튜브 채널의 어느 한 댓글 내용 참고.

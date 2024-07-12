@@ -138,7 +138,7 @@ If you want to include a polyfill, ...
 If you don't want to include a polyfill, ...
 ```
 
-이는 `fs`, `path`, `os` 모듈을 찾지 못해 발생하는 `Error`이다. Webpack의 `resolve` 옵션에 `polyfill`을 지정하라고 안내하지만, 이를 지정하더라도 또 다른 에러가 발생할 뿐이다.
+이는 `fs`, `path`, `os` 모듈을 찾지 못해 발생하는 `Error`이다. 이때, Webpack의 `resolve` 옵션에 `polyfill`을 지정하라고 안내하지만, 이를 지정하더라도 또 다른 에러가 발생할 뿐이다.
 
 문제의 핵심은 `fs`, `path`, `os` 같은 Node.js의 기본 모듈들이 React와 같은 클라이언트 사이드(브라우저 환경) 자바스크립트에서는 사용할 수 없다는 것이다. (이는 특정 자바스크립트 파일을 Node.js 상에서 실행했는지, 아니면 브라우저 환경에서 실행했는지의 차이로 볼 수 있다.) 이러한 모듈들은 서버 사이드에서 실행되는 Node.js 환경에서만 사용 가능하며, 클라이언트 사이드에서는 지원되지 않는다. 즉, React에서는 `fs`, `path`, `os`가 제공되지 않아 프로젝트 내부에서 사용할 수 없는 것이다. 따라서, React와 같이 클라이언트 사이드에서 실행되는 애플리케이션에서 이러한 모듈들을 직접 사용하려고 하면 `Module not found` 오류를 만나게 된다.
 

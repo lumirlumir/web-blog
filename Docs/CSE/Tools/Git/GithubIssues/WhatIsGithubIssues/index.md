@@ -1,12 +1,12 @@
 # ***Github Issues***란 무엇인가?
 
-***Issues***란, ***Issues Tracking***을 할 수 있게 ***Github***에서 제공하는 도구이다. 자체 기능인 ***Issues***, ***Projects***, ***Insights*** 등의 다양한 시각화 도구들을 함께 제공한다.
+***Issues***란, ***Issues Tracking***을 할 수 있도록 ***Github***에서 제공하는 도구이다. 자체 기능인 ***Issues***, ***Projects***, ***Insights*** 등의 다양한 시각화 도구들을 함께 제공한다.
 
 ***Asana***, ***Jira*** 등과 같은 협업 관리 툴이라고 생각하면 된다.
 
 하지만, 가장 큰 차이점은 ***Github***의 ***Issues***는 ***Github*** ***Repository***와 직접 통합되어 개발자들이 코드 작업과 함께 ***Issues***를 추적하고 해결하기에 훨씬 유용하다는 점이다.
 
-***Issues***에는 지속적으로 새로운 기능들이 추가되며, 더러 베타 버전인 기능들이 추가되었다가 삭제 되는 경우도 존재한다. 문서의 내용이 계속해서 수정될 가능성이 존재하기에, ***Github*** 공식 문서의 링크와 해당 파트의 내용을 간략히 정리해 두겠다.
+***Issues***에는 지속적으로 새로운 기능들이 추가되며, 더러 베타 버전인 기능들이 추가되었다가 삭제 되는 경우도 존재한다. 문서의 내용이 계속해서 수정될 가능성이 존재하기에, ***Github*** 공식 문서의 링크와 해당 파트의 내용을 간략히 정리해 두었다.
 
 정확한 내용은 공식 문서를 참조하는 것이 가장 확실하다. 공식 문서의 내용을 살펴보면, ***Issues***는 ***Github***상의 다양한 기능들과 강력한 연동이 가능하며, ***Issues*** 내에서도 다양한 기능들이 제공되는 것을 알 수 있다.
 
@@ -16,7 +16,7 @@
 
 ***Pull Request***와 연동해서 사용할 수 있으며, ***Projects***와 연동해서 사용할 수도 있고, 심지어는 ***Workflows***를 통한 ***Issues***의 자동화도 가능하다.
 
-### ***Commit***과의 연동
+### 1-1. ***Commit***과의 연동
 
 ***Issues***에는 `#1`, `#2`, `#3` 등의 번호가 붙어 있다. 이를 ***Commit Message***에 `"Commit Message... #1"` 등으로 입력하면 ***Issues***에 자동으로 관련된 ***Commit***을 보여주게 된다.
 
@@ -72,9 +72,9 @@
 
 대신, ***Github Markdown***의 `- []` 체크리스트 기능만을 이용하여 세부 태스크를 관리하는 것은 가능하다. 제목 바로 아래쪽에서 몇개의 태스크를 진행했는지 상세 진행내역을 확인할 수 있다.
 
-![6 tasks done](1.png)
+![6 tasks done](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/tools/git/what-is-github-issues/1.png?raw=true)
 
-![tasklist](2.png)
+![tasklist](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/tools/git/what-is-github-issues/2.png?raw=true)
 
 ## 4. ***Projects Classic***
 

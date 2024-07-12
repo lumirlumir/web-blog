@@ -1,6 +1,6 @@
 # Git Commit Message 규칙
 
-팀원과의 소통, 편리한 과거 기록의 추적을 위해 규칙에 맞는 Commit Message를 작성하는 것은 중요하다.
+팀원과의 소통, 편리한 과거 기록의 추적을 위해 규칙에 맞는 Commit Message를 작성하는 것이 중요하다.
 
 ## 1. Commit Message의 7가지 규칙
 
@@ -99,8 +99,8 @@ $ git commit -m "fix: Safari에서 모달을 띄웠을 때 스크롤 이슈 수�
 > Resolves: #1137"
 ```
 
-![Ailbaba Fusion commit](1.png "Ailbaba Fusion commit")
-![NHN tui.calendar commit](2.png "NHN tui.calendar commit")
+![Ailbaba Fusion commit](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/conventions/git/commit-messages/1.png?raw=true "Ailbaba Fusion commit")
+![NHN tui.calendar commit](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/conventions/git/commit-messages/2.png?raw=true "NHN tui.calendar commit")
 
 ## Reference
 

@@ -1,24 +1,24 @@
-# 02_자바스크립트(***JavaScript***)의 구성
+# 자바스크립트(***JavaScript***)의 구성
 
-웹 브라우저 환경에서의 ***JavaScript***는, `window`***<sup>1</sup>*** 란 최상위 객체와, ***코어(JavaScript, ECMAScript)<sup>2</sup>***, ***문서 객체 모델(Document Object Model, DOM)<sup>3</sup>***, ***브라우저 객체 모델(Browser Object Model)<sup>4</sup>*** 이란 3가지 하위 객체 요소들로 구성된다.
+웹 브라우저(클라이언트) 환경에서의 ***JavaScript***는, `window`***<sup>1</sup>*** 란 최상위 객체와, ***코어(JavaScript, ECMAScript)<sup>2</sup>***, ***문서 객체 모델(Document Object Model, DOM)<sup>3</sup>***, ***브라우저 객체 모델(Browser Object Model)<sup>4</sup>*** 이란 3가지 하위 객체 요소들로 구성된다.
 
 > <u>***호스트 환경 (Host Environment)***</u>
 >
-> ***JavaScript***가 돌아가는 플랫폼을 호스트(Host)라 한다. 호스트는 브라우저, 웹서버, 심지어는 커피 머신이 될 수 있다. 각 플랫폼은 해당 플랫폼에 특정되는 기능을 제공하는데, ***JavaScript*** 명세서에선 이를 호스트 환경(Host Environment) 이라 부른다.
+> ***JavaScript***가 돌아가는 플랫폼을 호스트(Host)라 한다. 호스트는 웹 브라우저, 웹 서버, 심지어는 커피 머신이 될 수 있다. 각 플랫폼은 해당 플랫폼에 특정되는 기능을 제공하는데, ***JavaScript*** 명세서에선 이를 호스트 환경(Host Environment) 이라 부른다.
 >
 > 호스트 환경은 코어(***ECMAScript***)에 더하여 플랫폼에 특정되는 객체와 함수를 제공한다. 웹 브라우저는 웹페이지를 제어하기 위한 수단을 제공하고, ***Node.js***는 서버 사이드 기능을 제공한다.
 >
 > 따라서, 코어는 항상 공통적으로 존재하지만, 호스트에 따라 ***DOM***과 ***BOM***은 존재하지 않을 수도 있다.
 
-아래 그림은 호스트 환경이 웹 브라우저일 때 사용할 수 있는 기능을 개괄적으로 보여준다.
+아래 그림은 호스트 환경이 웹 브라우저(클라이언트)일 때 사용할 수 있는 기능을 개괄적으로 보여준다.
 
-![window, JavaScript, DOM, BOM](1.png)
+![window, JavaScript, DOM, BOM](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/1.png?raw=true)
 
 ## 1. `window` 객체
 
 ***JavaScript***의 <u>최상위(루트) 객체</u>이자, 모든 객체가 소속된 <u>전역(***Global***)</u> 객체이다. 어디서든 접근이 가능하다고 하여 전역 객체라 불리며, 객체화된 수많은 구성 요소들로 이루어져 있다.
 
-![window object](2.png)
+![window object](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/2.png?raw=true)
 
 ### 1-1. 역할
 
@@ -36,7 +36,9 @@
 
 ### 1-2. 특징
 
-`window` 객체의 ***Property***나 ***Method***는 `window`를 생략하고 바로 사용할 수 있다. ex) `alert('My Message')`
+`window` 객체의 ***Property***나 ***Method***는 `window`를 생략하고 바로 사용할 수 있다.
+
+ex. `alert('My Message')`
 
 객체를 만든다는 것은 결국 `window` 객체의 ***Property***를 만드는 것과 같다. 전역 변수와 함수가 사실은 `window` 객체의 ***Property***와 ***Method***인 것이다. 따라서, `a`에 접근하는 방법은 아래와 같다.
 
@@ -76,11 +78,11 @@ console.log(window.a.id); // 1
 
 ***DOM***은 전체페이지를 노드 계층(Node Tree) 구조의 객체들로 변환하며, ***HTML*** 페이지의 각 부분을 각기 다른 데이터를 포함하는 다양한 타입의 노드로 표현한다.
 
-![Document Object](3.png)
+![Document Object](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/3.png?raw=true)
 
 ### 3-1. ***DOM***의 구조 (The ***HTML*** ***DOM*** tree of objects)
 
-![The HTML DOM tree of objects](4.png)
+![The HTML DOM tree of objects](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/4.png?raw=true)
 
 노드 종류 | 역할
 :--- | :---
@@ -102,19 +104,19 @@ Comment Node | ***HTML*** 문서의 <u>***Comment***(주석)</u>
 
 `navigator` 객체는 브라우저와 운영체제에 대한 정보를 제공한다. 객체에는 다양한 ***Property***가 있는데, 가장 잘 알려진 ***Property***는 현재 사용 중인 브라우저 정보를 알려주는 `navigator.userAgent`와 브라우저가 실행 중인 운영체제(***Windows***, ***Linux***, ***Mac*** 등) 정보를 알려주는 `navigator.platform`이다. 이는 주로 호환성 문제를 해결하기 위해 사용된다.
 
-![navigator object](5.png)
+![navigator object](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/5.png?raw=true)
 
 ### 4-2. `screen`
 
 `screen` 객체는 화면에 대한 정보를 알려준다. 너비(`width`), 높이(`height`), 픽셀(`pixelDepth`), 컬러(`colorDepth`), 화면 방향(`orientation`), 작업표시줄을 제외한 너비와 높이(`availWidth`, `availHeight`) 등이 있다. 화면 크기에 따라 다른 동작을 하고 싶을 때 사용한다.
 
-![screen object](6.png)
+![screen object](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/6.png?raw=true)
 
 ### 4-3. `location`
 
 `location` 객체는 ***URL*** 주소에 대한 정보를 제공하여, 현재 ***URL***을 읽을 수 있게 해주고 새로운 ***URL***로 변경(redirect)할 수 있게 해준다.
 
-![location object](7.png)
+![location object](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/7.png?raw=true)
 
 ### 4-4. `frames`
 
@@ -126,7 +128,7 @@ Returns the `window` itself, which is an ***array-like object***, listing the di
 
 `history` 객체는 브라우저의 세션 기록, 즉 현재 페이지를 불러온 탭 또는 프레임의 방문 기록을 조작할 수 있는 방법을 제공한다.
 
-![history object](8.png)
+![history object](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/cs/languages/javascript/composition-of-javascript/8.png?raw=true)
 
 ### 4-6. `XMLHttpRequest`
 
