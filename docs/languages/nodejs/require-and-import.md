@@ -305,7 +305,7 @@ console.log(currency.usToCanadian(30));
 
 한 가지 주의할 점은 Babel 없이 순수하게 Node.js 최신 버전으로 ES 모듈을 사용하고 있다면, `import`를 사용할 때 `.js` 확장자를 붙여주어야 한다.
 
-## reference
+## Reference
 
 - <https://www.daleseo.com/js-module-require/#%EC%A3%BC%EC%9D%98-%EC%82%AC%ED%95%AD>
 - <https://www.daleseo.com/js-module-import/#%EB%8B%A8%EC%9D%BC-%EA%B0%9D%EC%B2%B4-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0>

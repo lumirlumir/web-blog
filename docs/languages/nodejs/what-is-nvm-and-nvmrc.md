@@ -49,7 +49,7 @@ nvm install
 nvm use
 ```
 
-## reference
+## Reference
 
 - <https://github.com/nvm-sh/nvm>
 - <https://chatgpt.com/share/10d12a70-cc6e-4770-9318-24b864d5d8d6>
