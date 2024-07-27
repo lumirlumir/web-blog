@@ -35,7 +35,7 @@
 - 표준이 없기 때문에 도구에 따라서 변환방식이나 생성물이 다르다.
 - 모든 ***HTML*** 문법을 대체하지 못한다.
 
-## 2. ***Markdown*** 사용법(문법)
+## 2. ***Markdown*** 사용법(문법) - 표준 마크다운 문법
 
 각 ***Markdown*** 문법은 ***HTML*** 태그로 변환되어 브라우저에 출력된다. 모든 ***HTML*** 태그를 지원하는 것은 아니며, 일부 중요한 문법만을 제공한다.
 
@@ -692,18 +692,18 @@
   ```text
   - [1. ***Markdown***에 대하여](#1-markdown에-대하여)
 
-  - [2. ***Markdown*** 사용법(문법)](#2-markdown-사용법문법)
+  - [2. ***Markdown*** 사용법(문법) - 표준 마크다운 문법](#2-markdown-사용법문법---표준-마크다운-문법)
 
-  - [3. ***Markdown*** 에디터](#3-markdown-에디터)
+  - [3. ***Markdown*** 사용법(문법) - GFM(Github Flavored Markdown)](#3-markdown-사용법문법---gfmgithub-flavored-markdown)
   ```
 
 - 출력
 
   - [1. ***Markdown***에 대하여](#1-markdown에-대하여)
 
-  - [2. ***Markdown*** 사용법(문법)](#2-markdown-사용법문법)
+  - [2. ***Markdown*** 사용법(문법) - 표준 마크다운 문법](#2-markdown-사용법문법---표준-마크다운-문법)
 
-  - [3. ***Markdown*** 에디터](#3-markdown-에디터)
+  - [3. ***Markdown*** 사용법(문법) - GFM(Github Flavored Markdown)](#3-markdown-사용법문법---gfmgithub-flavored-markdown)
 
 ##### 2-8-4-2. HTML style
 
@@ -1061,7 +1061,16 @@
   셀4|셀5|셀6
   셀7|셀8|셀9
 
-### 2-13. 체크 리스트(Check Lists)
+### 2-13. 원시 HTML
+
+마크다운 문법 대신, ***HTML***을 직접 사용(Raw HTML)할 수 있다.
+앞서 살펴본 밑줄 `<u></u>` 추가와 같이, 마크다운 문법에서 지원하지 않는 기능을 사용할 때 유용하다. 단, 모든 HTML 태그가 지원되는 것은 아니니 유의해야 한다.
+
+## 3. ***Markdown*** 사용법(문법) - GFM(Github Flavored Markdown)
+
+위에서 언급한 문법은 모든 마크다운에 공통적으로 적용되는 표준 마크다운 문법이다. Github에서는 추가적으로 체크 리스트, 알림 상자 등의 고급 마크다운 문법을 지원하는데, 이를 GFM(Github Flavored Markdown)이라고 한다. 단, 해당 문법은 Github가 아닌 다른 플랫폼에서 동일한 동작을 보장하지 않으니 주의해야 한다.
+
+### 3-1. 체크 리스트(Check Lists)
 
 줄 앞에 `- [x]`를 써서 완료된 리스트 표시.
 
@@ -1093,7 +1102,7 @@
 
   - [x] @mentions, #refs, [links](link), **formatting**, and <del>tags</del> supported
 
-### 2-14. 수학 식(수식, 표현식)
+### 3-2. 수학 식(수식, 표현식)
 
 ***Github***를 비롯한 소수의 플랫폼에서만 지원하는 기능이다. (2022년 5월 19일 부터 ***Github***에서 수학 식 렌더링을 공식 제공한다.)
 
@@ -1105,7 +1114,7 @@
 
 `inline` 혹은 `block` 형태로 작성할 수 있다.
 
-#### 2-14-1. 인라인(Inline)
+#### 3-2-1. 인라인(Inline)
 
 식을 달러(`$`) 기호로 묶으면 된다.
 
@@ -1121,7 +1130,7 @@
 
   This sentence uses `$` delimiters to show math inline: $\sqrt{3x-1}+(1+x)^2$
 
-#### 2-14-2. 블록(Block)
+#### 3-2-2. 블록(Block)
 
 주변 텍스트와 별개로 수학 식을 추가하기 위해 사용한다.
 
@@ -1139,26 +1148,206 @@
   **The Cauchy-Schwarz Inequality**
   $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
-### 2-15. 원시 HTML
+### 3-3. 알림 상자(경고)
 
-마크다운 문법 대신, ***HTML***을 직접 사용(Raw HTML)할 수 있다.
-앞서 살펴본 밑줄 `<u></u>` 추가와 같이, 마크다운 문법에서 지원하지 않는 기능을 사용할 때 유용하다. 단, 모든 HTML 태그가 지원되는 것은 아니니 유의해야 한다.
+알림 상자(경고)는 중요한 정보를 강조하는 데 사용할 수 있는 blockquote 구문을 기반으로 한 Markdown 확장이다. Github에서는 콘텐츠의 중요도를 나타내기 위해, 고유한 색과 아이콘으로 알림 상자를 표시한다.
 
-## 3. ***Markdown*** 에디터
+알림 상자는 중요한 경우에만 사용하고, 판독기 오버로드를 방지하기 위해 문서당 하나 또는 두 개로 제한하는 것을 권장한다. 또한, 알림 상자를 연속적으로 배치하지 않아야 하며, 다른 요소 내에 중첩할 수 없다.
 
-### 3-1. 메모장
+알림 상자를 추가하려면, 유형을 지정하는 특수 blockquote 줄을 사용하고, 그 다음에는 표준 blockquote의 알림 상자 정보를 사용한다. 5가지 유형의 알림 상자를 사용할 수 있다.
+
+- 입력
+
+  ```text
+  > [!NOTE]
+  > Useful information that users should know, even when skimming content.
+
+  > [!TIP]
+  > Helpful advice for doing things better or more easily.
+
+  > [!IMPORTANT]
+  > Key information users need to know to achieve their goal.
+
+  > [!WARNING]
+  > Urgent info that needs immediate user attention to avoid problems.
+
+  > [!CAUTION]
+  > Advises about risks or negative outcomes of certain actions.
+  ```
+
+- 출력
+
+  ![참고, 팁, 중요, 경고, 주의가 서로 다른 색의 텍스트와 아이콘으로 렌더링되는 방식을 보여 주는 렌더링된 Markdown 경고의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/2.png?raw=true)
+
+### 3-4. 요약 및 접기 기능
+
+`<details>` 및 `<summary>` 태그를 사용하여 요약 및 접기 기능을 사용할 수 있다.
+
+- 입력
+
+  ```html
+  <details>
+    <summary>클릭하여 자세히 보기</summary>
+    이곳에 상세 내용을 작성한다.
+  </details>
+  ```
+
+- 출력
+
+  <details>
+    <summary>클릭하여 자세히 보기</summary>
+    이곳에 상세 내용을 작성한다.
+  </details>
+
+### 3-5. 이모지
+
+`:EMOJICODE:`(콜론, 이모지 이름, 콜론) 순으로 입력하여 글에 이모지를 추가할 수 있다.
+
+`:`을 입력하면 제안된 이모지 목록이 표시된다. 입력할 때 목록이 필터링되므로, 원하는 이모지를 찾았으면 <kbd>Tab</kbd> 또는 <kbd>Enter</kbd> 키를 눌러 강조 표시된 결과를 완성한다.
+
+사용 가능한 이모지 및 코드의 전체 목록을 보려면 [Emoji-Cheat-Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)를 참조하자.
+
+- 입력
+
+  ```markdown
+  @octocat :+1: This PR looks great - it's ready to merge! :shipit:
+  ```
+
+- 출력
+
+  ![+1 및 shipit에 대한 이모지 코드가 이모지로 시각적으로 렌더링되는 방법을 보여 주는 렌더링된 GitHub Markdown의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/3.png?raw=true)
+
+### 3-6. 지원되는 색 모델
+
+이슈, 끌어오기 요청 및 토론에서 백틱(<code>\`</code>)을 사용하여 문장 내의 색을 나타낼 수 있다. 백틱(<code>\`</code>) 내에서 지원되는 색 모델은 색의 시각화를 표시한다.
+
+현재 지원되는 색 모델은 아래와 같다.
+
+Color|구문|예시|출력
+:---:|:---:|:---:|:---:
+HEX|`#RRGGBB`|`#0969DA`|![HEX 값 #0969DA 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/4.png?raw=true)
+RGB|`rgb(R,G,B)`|`rgb(9, 105, 218)`|![RGB 값 9, 105, 218이 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/5.png?raw=true)
+HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/6.png?raw=true)
+
+- 입력
+
+  ```markdown
+  The background color is `#ffffff` for light mode and `#000000` for dark mode.
+  ```
+
+- 출력
+
+  ![output](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/7.png?raw=true)
+
+> [!NOTE]
+>
+> - 지원되는 색 모델에서 백틱(<code>\`</code>) 내에는 선행 또는 후행 공백이 있을 수 없다.
+> - 색 시각화는 이슈, 끌어오기 요청 및 토론에서만 지원된다.
+
+### 3-7. 사람과 팀 멘션
+
+`@`와 함께 사용자 이름 또는 팀 이름을 입력하여 Github에서 사람 또는 팀을 멘션할 수 있다. 그러면 알림이 트리거되고 해당 사용자의 주의를 대화에 집중시킬 수 있다. 또한 사용자 이름 또는 팀 이름을 멘션하는 메모를 편집하는 경우에도 해당 사용자는 알림을 받게 된다.
+
+> [!NOTE]
+>
+> 리포지토리에 대한 읽기 권한이 있는 경우에만 멘션에 대한 알림을 받으며, 리포지토리를 조직에서 소유한 경우 해당 사용자는 조직의 멤버가 된다.
+
+부모 팀을 멘션할 경우 자식 팀의 구성원도 알림을 수신하므로, 여러 사용자 그룹과의 통신이 간소화된다.
+
+`@` 기호를 입력하면 프로젝트에 사용자 또는 팀 목록이 표시된다. 입력할 때 목록이 필터링되므로 찾고 있는 사용자나 팀의 이름을 찾았으면 <kbd>화살표</kbd> 키를 사용하여 선택하고 <kbd>Tab</kbd> 또는 <kbd>Enter</kbd> 키를 눌러 이름을 완성할 수 있다. 팀의 경우 `@organization/team-name`을 입력하면 해당 팀의 모든 구성원이 대화를 구독하게 된다.
+
+자동 완성 결과는 리포지토리 협력자 및 스레드의 다른 참가자로 제한된다.
+
+- 입력
+
+  ```markdown
+  @Github/support What do you think about these updates?
+  ```
+
+- 출력
+
+  ![팀 멘션 "@Github/support"을(를) 굵고 클릭 가능한 텍스트로 렌더링하는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/8.png?raw=true)
+
+### 3-8. 이슈 및 끌어오기 요청 참조
+
+`#`을 입력하여 리포지토리 내에서 제안된 이슈 및 끌어오기 요청 목록을 표시할 수 있다. 이슈, 끌어오기 요청 번호 또는 제목을 입력하여 목록을 필터링한 다음, <kbd>Tab</kbd> 또는 <kbd>Enter</kbd> 키를 눌러 강조 표시된 결과를 완성한다.
+
+참조 형식 | 원시 참조 | 짧은 링크
+---|---|---
+이슈 또는 끌어오기 요청 URL | `https://github.com/jlord/sheetsee.js/issues/26` | `#26`
+`#` 및 이슈 또는 끌어오기 요청 번호 | `#26` | `#26`
+`GH-` 및 이슈 또는 끌어오기 요청 번호 | `GH-26` | `GH-26`
+`Username/Repository#` 및 이슈 또는 끌어오기 요청 번호 | `jlord/sheetsee.js#26` | `jlord/sheetsee.js#26`
+`Organization_name/Repository#` 및 이슈 또는 끌어오기 요청 번호 | `github-linguist/linguist#4039` | `Github-linguist/linguist#4039`
+
+### 3-9. 각주
+
+대괄호(`[]`) 구문을 사용하여 콘텐츠에 각주를 추가할 수 있다.
+
+- 입력
+
+  ```markdown
+  Here is a simple footnote[^1].
+
+  A footnote can also have multiple lines[^2].
+
+  [^1]: My reference.
+  [^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+    This is a second line.
+  ```
+
+- 출력
+
+  ![각주를 나타내는 데 사용되는 위 첨자 번호와 메모 내의 선택적 줄 바꿈을 보여 주는 렌더링된 Markdown의 스크린샷.](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/9.png?raw=true)
+
+> [!NOTE]
+>
+> - Markdown에서 각주의 위치는 각주가 렌더링될 위치에 영향을 주지 않는다. 각주에 대한 참조 바로 뒤에 각주를 작성할 수 있으며, 각주는 여전히 Markdown의 하단에 렌더링된다.
+>
+> - 각주는 wiki에서 지원되지 않는다.
+
+### 3-10. 섹션 링크
+
+섹션 제목을 마우스로 가리켜 렌더링된 파일의 섹션에 직접 연결할 수 있다.
+
+![section link](https://github.com/lumirlumir/web-blog-data-img/blob/main/images/languages/markdown/everything-about-markdown/10.png?raw=true)
+
+### 3-11. 상대 링크
+
+렌더링된 파일에서 상대 링크 및 이미지 경로를 정의하여 판독기에서 리포지토리의 다른 파일로 이동할 수 있다.
+
+상대 링크는 현재 파일을 기준으로 하는 링크이다. 예를 들어 리포지토리의 루트에 추가 정보 파일이 있고, `docs/CONTRIBUTING.md`에 다른 파일이 있는 경우, 추가 정보의 `CONTRIBUTING.md`에 대한 상대 링크는 다음과 같다.
+
+```markdown
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+```
+
+Github는 현재 위치한 분기에 따라 상대 링크 또는 이미지 경로를 자동으로 변환하므로 링크 또는 경로는 항상 작동한다. 링크의 경로는 현재 파일을 기준으로 한다. `/` 시작 링크는 리포지토리 루트를 기준으로 한다. `./` 및 `../`와 같은 모든 상대 링크 피연산자를 사용할 수 있다.
+
+링크 텍스트는 한 줄이어야 한다. 아래 예시는 작동하지 않는다.
+
+```markdown
+[Contribution
+guidelines for this project](docs/CONTRIBUTING.md)
+```
+
+상대 링크는 리포지토리를 복제하는 사용자가 사용하기 더 쉽다. 절대 링크는 리포지토리의 복제본에서 작동하지 않을 수 있다. 상대 링크를 사용하여 리포지토리 내의 다른 파일을 참조하는 것이 좋다.
+
+## 4. ***Markdown*** 에디터
+
+### 4-1. 메모장
 
 ***Markdown***은 문법이 쉬워, 에디터를 사용할 필요 없이 메모장에서 작업을 해도 무리가 없다. 다만, 작업 속도 향상을 위해 ***VScode***와 같은 에디터를 사용할 것을 추천한다.
 
 에디터는 ***Markdown***을 실시간 렌더링하여 화면상에 보여주며, 단축키 등을 활용하여 빠르게 사용할 수 있다.
 
-### 3-2. VScode
+### 4-2. VScode
 
-#### 3-2-1. Original
+#### 4-2-1. Original
 
 ***VScode***에 아무런 확장을 설치하지 않더라도, 기본 적으로 제공되는 ***Markdown Preview***를 이용할 수 있다. 다만, ***Github***의 ***Markdown***에서 지원되는 일부 기능을 사용할 수 없고, 테마 스타일도 약간 다르다.
 
-#### 3-2-2. Extension: Dark Github Markdown Pack
+#### 4-2-2. Extension: Dark Github Markdown Pack
 
 ***VScode***에서 ***Github***의 ***Markdown*** 테마 스타일로 ***Markdown Preview***를 이용할 수 있게 해주는 확장 팩이다. 아래는 해당 확장 팩에 대한 설명이다.
 
@@ -1167,11 +1356,11 @@
 - Markdown Checkboxes — Adds - [ ] tasklist support to the Markdown preview
 - Markdown yaml Preamble — Adds support for rendering the yaml frontmatter as a table. Be sure to set "markdown.previewFrontMatter": "show"
 
-### 3-3. Typora
+### 4-3. Typora
 
 군더더기 없는 디자인이 매력적인 무료 에디터이다. 일일이 타이핑했던 문법을 자동으로 완성하여 작업시간 단축할 수 있다. ***Markdown***을 처음 사용하는 분들에게 추천한다.
 
-## 4. ***Markdown*** 활용
+## 5. ***Markdown*** 활용
 
 ***Markdown***은 지원되는 모든 곳에서 사용할 수 있다. 예를 들어, ***Github***, ***Velog*** 등의 블로그 서비스, ***WordPress***, ***Slack***(슬랙), ***Notion***(노션), ***Discord***  등이 있다.
 
@@ -1187,3 +1376,7 @@
 - <https://inpa.tistory.com/entry/MarkDown-%F0%9F%93%9A-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%F0%9F%92%AF-%EC%A0%95%EB%A6%AC#table_%ED%85%8C%EC%9D%B4%EB%B8%94>
 - <https://github.com/DavidAnson/markdownlint/tree/v0.33.0?tab=readme-ov-file#readme>
 - <https://docs.github.com/ko/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions>
+- <https://github.github.com/gfm> (GFM)
+- <https://github.github.com/gfm/#disallowed-raw-html-extension-> (GFM)
+- <https://docs.github.com/ko/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#urls> (GFM)
+- <https://docs.github.com/ko/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax> (GFM)
