@@ -1,33 +1,45 @@
 {
-  "MD004": {
+  "heading-style": {
+    "style": "atx"
+  },
+  "ul-style": {
     "style": "dash"
   },
-  "MD013": false,
-  "MD014": false,
-  "MD033": {
-    "allowed_elements": ["image", "sup", "u", "code"]
+  "line-length": false,
+  "commands-show-output": false,
+  "no-duplicate-heading": {
+    "siblings_only": true
   },
-  "MD044": {
-    "names": [
-      "VScode",
-      "Github",
-      "JavaScript",
-      "ECMAScript",
-      "jQuery",
-      ".js",
-      "React.js",
-      "Node.js",
-      "BOM"
+  "ol-prefix": {
+    "style": "one"
+  },
+  "no-inline-html": {
+    "allowed_elements": [
+      "sub",
+      "sup",
+      "u",
+      "br",
+      "details",
+      "summary",
+      "image",
+      "code",
+      "kbd"
     ]
   },
-  "MD048": {
+  "hr-style": {
+    "style": "---"
+  },
+  "code-block-style": {
+    "style": "fenced"
+  },
+  "code-fence-style": {
     "style": "backtick"
   },
-  "MD049": {
+  "emphasis-style": {
     "style": "asterisk"
   },
-  "MD050": {
+  "strong-style": {
     "style": "asterisk"
   },
-  "MD056": false
+  "table-column-count": false
 }
