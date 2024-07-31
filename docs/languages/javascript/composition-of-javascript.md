@@ -25,7 +25,7 @@
 `window` 객체는 2가지 역할을 한다.
 
 1. ***JavaScript***의 전역 객체이다.
-2. 브라우저 창을 의미하고, 이를 제어할 수 있는 ***Property***와 ***Method***를 제공한다.
+1. 브라우저 창을 의미하고, 이를 제어할 수 있는 ***Property***와 ***Method***를 제공한다.
 
     ```javascript
     console.log(window.innerWidth); // 창의 너비

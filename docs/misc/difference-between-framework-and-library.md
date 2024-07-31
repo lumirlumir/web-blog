@@ -61,8 +61,8 @@
 ***React*** Class 컴포넌트의 Life Cycle을 살펴보자. Render 과정의 Life Cycle을 예시로 했을 때, 순서는 다음과 같다.
 
 1. `componentWillMount()`
-2. `render()`
-3. `componentDidMount()`
+1. `render()`
+1. `componentDidMount()`
 
 ***React***는 위와 같이 프로그램 흐름의 기본 틀이 존재하지만, 이를 반드시 지킬 필요는 없다. 앱 실행 시 `render()` 함수는 작성이 필수이다. 하지만, 자동 생성되는 `componentDidMount()` 함수는 명시적 작성이 필요 없다. 개발자가 API를 호출하거나 다른 작업을 수행하기를 원할 때, `componentDidMount()` 함수를 통해 프로그램의 추가적인 동작을 정의할 수 있다. 즉, 프로그램 흐름에 작업을 추가하거나 하지 않아 프로그램의 흐름을 바꾸는 것이 가능하기 때문에 ***React***는 라이브러리인 것이다.
 
