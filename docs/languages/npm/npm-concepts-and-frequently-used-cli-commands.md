@@ -110,7 +110,7 @@ npm init --yes
 npm install [<@scope>/]<name>@<version>
 ```
 
-> ![TIP]
+> [!TIP]
 >
 > 1. `@<version>`을 입력하지 않으면, 패키지의 최신 버전으로 설치된다.
 >
