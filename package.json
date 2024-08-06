@@ -13,7 +13,7 @@
     "markdownlint-cli": "^0.41.0"
   },
   "lint-staged": {
-    "*": "npm run lint-editorconfig",
+    "*": "npx editorconfig-checker",
     "*.md": "npx markdownlint"
   }
 }
