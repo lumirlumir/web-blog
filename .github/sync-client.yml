@@ -1,0 +1,21 @@
+lumirlumir/lumirlumir-configs:
+  - source: ./.github/sync-client.yml
+    dest: ./clients/web-blog-data-md.yml
+  # ./.github/workflows
+  - source: ./.github/workflows/sync-client.yml
+    dest: ./configs/.github/workflows/sync-client.yml
+  # ./.github
+  - source: ./.github/dependabot.yml
+    dest: ./configs/.github/dependabot.yml
+  # ./.husky
+  - source: ./.husky/pre-commit
+    dest: ./configs/.husky/pre-commit
+  # ./
+  - source: ./.editorconfig
+    dest: ./configs/.editorconfig
+  - source: ./.markdownlint.json
+    dest: ./configs/.markdownlint.json
+  - source: ./.nvmrc
+    dest: ./configs/.nvmrc
+  - source: ./VScode.code-workspace
+    dest: ./configs/VScode.code-workspace
