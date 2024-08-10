@@ -1,7 +1,7 @@
-# web-blog-data-md
+# web-blog
 
-A collection of markdown documents for blog posting.<br>
-블로그 포스팅을 위한 마크다운 문서 모음📖.
+A collection of markdown documents and images for blog posting.<br>
+블로그 포스팅을 위한 마크다운 문서 및 이미지 모음.📖
 
 ## Markdown Personal Convention
 
