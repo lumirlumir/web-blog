@@ -18,6 +18,8 @@ lumirlumir/lumirlumir-configs:
   # ./
   - source: ./.editorconfig
     dest: ./configs/.editorconfig
+  - source: ./.gitignore
+    dest: ./configs/.gitignore
   - source: ./.markdownlint.json
     dest: ./configs/.markdownlint.json
   - source: ./.nvmrc
