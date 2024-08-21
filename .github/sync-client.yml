@@ -7,6 +7,8 @@ lumirlumir/lumirlumir-configs:
   # ./.github
   - source: ./.github/dependabot.yml
     dest: ./configs/.github/dependabot.yml
+  - source: ./.github/FUNDING.yml
+    dest: ./configs/.github/FUNDING.yml
   # ./.husky
   - source: ./.husky/pre-commit
     dest: ./configs/.husky/pre-commit
