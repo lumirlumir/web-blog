@@ -12,6 +12,9 @@ lumirlumir/lumirlumir-configs:
   # ./.husky
   - source: ./.husky/pre-commit
     dest: ./configs/.husky/pre-commit
+  # ./.vscode
+  - source: ./.vscode/settings.json
+    dest: ./configs/.vscode/settings.json
   # ./
   - source: ./.editorconfig
     dest: ./configs/.editorconfig
