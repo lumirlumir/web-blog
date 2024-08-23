@@ -99,8 +99,8 @@ $ git commit -m "fix: Safari에서 모달을 띄웠을 때 스크롤 이슈 수�
 > Resolves: #1137"
 ```
 
-![Ailbaba Fusion commit](/images/conventions/git/convention-of-git-commit-message/1.png?raw=true "Ailbaba Fusion commit")
-![NHN tui.calendar commit](/images/conventions/git/convention-of-git-commit-message/2.png?raw=true "NHN tui.calendar commit")
+![Ailbaba Fusion commit](/public/images/conventions/git/convention-of-git-commit-message/1.png?raw=true "Ailbaba Fusion commit")
+![NHN tui.calendar commit](/public/images/conventions/git/convention-of-git-commit-message/2.png?raw=true "NHN tui.calendar commit")
 
 ## Reference
 

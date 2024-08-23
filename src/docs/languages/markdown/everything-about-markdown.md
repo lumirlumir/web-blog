@@ -748,8 +748,8 @@
 
 - 출력
 
-  ![석촌호수 러버덕](/images/languages/markdown/everything-about-markdown/1.png?raw=true)
-  ![석촌호수 러버덕](/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck")
+  ![석촌호수 러버덕](/public/images/languages/markdown/everything-about-markdown/1.png?raw=true)
+  ![석촌호수 러버덕](/public/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck")
 
 ##### 2-9-1-2. 참조 이미지
 
@@ -779,8 +779,8 @@
   ![석촌호수 러버덕][Ref1]
   ![석촌호수 러버덕][Ref2]
 
-  [Ref1]: /images/languages/markdown/everything-about-markdown/1.png?raw=true
-  [Ref2]: /images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck"
+  [Ref1]: /public/images/languages/markdown/everything-about-markdown/1.png?raw=true
+  [Ref2]: /public/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck"
 
 ##### 2-9-1-3. 이미지에 링크 추가
 
@@ -793,7 +793,7 @@
   ```
 
 - 출력
-  [![석촌호수 러버덕](/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck Wiki")](https://en.wikipedia.org/wiki/Rubber_duck)
+  [![석촌호수 러버덕](/public/images/languages/markdown/everything-about-markdown/1.png?raw=true "RubberDuck Wiki")](https://en.wikipedia.org/wiki/Rubber_duck)
 
 #### 2-9-2. HTML style
 
@@ -808,8 +808,8 @@
 
 - 출력
 
-  <img src="/images/languages/markdown/everything-about-markdown/1.png?raw=true" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br>
-  <img src="/images/languages/markdown/everything-about-markdown/1.png?raw=true" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
+  <img src="/public/images/languages/markdown/everything-about-markdown/1.png?raw=true" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br>
+  <img src="/public/images/languages/markdown/everything-about-markdown/1.png?raw=true" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
 
 ### 2-10. 코드(Codes)
 
@@ -1177,7 +1177,7 @@
 
 - 출력
 
-  ![참고, 팁, 중요, 경고, 주의가 서로 다른 색의 텍스트와 아이콘으로 렌더링되는 방식을 보여 주는 렌더링된 Markdown 경고의 스크린샷.](/images/languages/markdown/everything-about-markdown/2.png?raw=true)
+  ![참고, 팁, 중요, 경고, 주의가 서로 다른 색의 텍스트와 아이콘으로 렌더링되는 방식을 보여 주는 렌더링된 Markdown 경고의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/2.png?raw=true)
 
 ### 3-4. 요약 및 접기 기능
 
@@ -1215,7 +1215,7 @@
 
 - 출력
 
-  ![+1 및 shipit에 대한 이모지 코드가 이모지로 시각적으로 렌더링되는 방법을 보여 주는 렌더링된 GitHub Markdown의 스크린샷.](/images/languages/markdown/everything-about-markdown/3.png?raw=true)
+  ![+1 및 shipit에 대한 이모지 코드가 이모지로 시각적으로 렌더링되는 방법을 보여 주는 렌더링된 GitHub Markdown의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/3.png?raw=true)
 
 ### 3-6. 지원되는 색 모델
 
@@ -1225,9 +1225,9 @@
 
 Color|구문|예시|출력
 :---:|:---:|:---:|:---:
-HEX|`#RRGGBB`|`#0969DA`|![HEX 값 #0969DA 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/images/languages/markdown/everything-about-markdown/4.png?raw=true)
-RGB|`rgb(R,G,B)`|`rgb(9, 105, 218)`|![RGB 값 9, 105, 218이 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/images/languages/markdown/everything-about-markdown/5.png?raw=true)
-HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/images/languages/markdown/everything-about-markdown/6.png?raw=true)
+HEX|`#RRGGBB`|`#0969DA`|![HEX 값 #0969DA 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/4.png?raw=true)
+RGB|`rgb(R,G,B)`|`rgb(9, 105, 218)`|![RGB 값 9, 105, 218이 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/5.png?raw=true)
+HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원으로 표시되는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/6.png?raw=true)
 
 - 입력
 
@@ -1237,7 +1237,7 @@ HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원�
 
 - 출력
 
-  ![output](/images/languages/markdown/everything-about-markdown/7.png?raw=true)
+  ![output](/public/images/languages/markdown/everything-about-markdown/7.png?raw=true)
 
 > [!NOTE]
 >
@@ -1266,7 +1266,7 @@ HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원�
 
 - 출력
 
-  ![팀 멘션 "@Github/support"을(를) 굵고 클릭 가능한 텍스트로 렌더링하는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/images/languages/markdown/everything-about-markdown/8.png?raw=true)
+  ![팀 멘션 "@Github/support"을(를) 굵고 클릭 가능한 텍스트로 렌더링하는 방법을 보여 주는 렌더링된 Github Markdown의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/8.png?raw=true)
 
 ### 3-8. 이슈 및 끌어오기 요청 참조
 
@@ -1298,7 +1298,7 @@ HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원�
 
 - 출력
 
-  ![각주를 나타내는 데 사용되는 위 첨자 번호와 메모 내의 선택적 줄 바꿈을 보여 주는 렌더링된 Markdown의 스크린샷.](/images/languages/markdown/everything-about-markdown/9.png?raw=true)
+  ![각주를 나타내는 데 사용되는 위 첨자 번호와 메모 내의 선택적 줄 바꿈을 보여 주는 렌더링된 Markdown의 스크린샷.](/public/images/languages/markdown/everything-about-markdown/9.png?raw=true)
 
 > [!NOTE]
 >
@@ -1310,7 +1310,7 @@ HSL|`hsl(H,S,L)`|`hsl(212, 92%, 45%)`|![HSL 값 212, 92%, 45%가 파란색 원�
 
 섹션 제목을 마우스로 가리켜 렌더링된 파일의 섹션에 직접 연결할 수 있다.
 
-![section link](/images/languages/markdown/everything-about-markdown/10.png?raw=true)
+![section link](/public/images/languages/markdown/everything-about-markdown/10.png?raw=true)
 
 ### 3-11. 상대 링크
 
