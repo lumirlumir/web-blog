@@ -2,6 +2,8 @@ lumirlumir/lumirlumir-configs:
   - source: ./.github/sync-client.yml
     dest: ./clients/web-blog.yml
   # ./.github/workflows
+  - source: ./.github/workflows/lint.yml
+    dest: ./configs/.github/workflows/lint.yml
   - source: ./.github/workflows/sync-client.yml
     dest: ./configs/.github/workflows/sync-client.yml
   # ./.github

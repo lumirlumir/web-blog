@@ -9,6 +9,14 @@ on:
 
 jobs:
   lint:
+    # strategy:
+    #   matrix:
+    #     type:
+    #       - eslint
+    #       - prettier
+    #       - editorconfig
+    #       - markdownlint
+
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +38,8 @@ jobs:
       - name: Set up node_modules
         run: npm ci
 
-      - name: Lint editorconfig
-        run: npm run lint-editorconfig
+      - name: Lint
+        run: npm run lint
 
-      - name: Lint markdownlint
-        run: npm run lint-markdownlint
+      # - name: Lint ${{ matrix.type }}
+      #   run: npm run lint-${{ matrix.type }} --if-present
