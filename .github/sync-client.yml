@@ -20,6 +20,8 @@ lumirlumir/lumirlumir-configs:
   # ./
   - source: ./.editorconfig
     dest: ./configs/.editorconfig
+  - source: ./.eslintignore
+    dest: ./configs/.eslintignore
   - source: ./.gitignore
     dest: ./configs/.gitignore
   - source: ./.markdownlint.json
