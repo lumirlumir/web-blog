@@ -26,5 +26,9 @@ lumirlumir/lumirlumir-configs:
     dest: ./configs/.markdownlint.json
   - source: ./.nvmrc
     dest: ./configs/.nvmrc
+  - source: ./.prettierignore
+    dest: ./configs/.prettierignore
+  - source: ./.prettierrc.js
+    dest: ./configs/.prettierrc.js
   - source: ./VScode.code-workspace
     dest: ./configs/VScode.code-workspace
