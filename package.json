@@ -4,7 +4,7 @@
     "prepare": "husky",
     "lint-editorconfig": "npx editorconfig-checker",
     "lint-markdownlint": "npx markdownlint **/*.md",
-    "count-docs": "ls -R docs/ | grep .md | wc -l"
+    "count-docs": "ls -R src/docs/ | grep .md | wc -l"
   },
   "devDependencies": {
     "editorconfig-checker": "^5.1.8",
