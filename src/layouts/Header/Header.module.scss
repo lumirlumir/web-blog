@@ -1,0 +1,10 @@
+.header {
+  @include props-flex-center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 32px;
+  background-color: inherit;
+}
