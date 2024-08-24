@@ -2,18 +2,54 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "concurrently \"npm:lint-*\"",
+    "lint-eslint": "npx eslint . --ext .js,.jsx",
+    "lint-stylelint": "npx stylelint **/*.{css,scss}",
+    "lint-prettier": "npx prettier . --check",
     "lint-editorconfig": "npx editorconfig-checker",
     "lint-markdownlint": "npx markdownlint **/*.md",
-    "count-docs": "ls -R docs/ | grep .md | wc -l"
+    "lint-textlint": "npx textlint -f pretty-error src/docs",
+    "fix": "concurrently \"npm:fix-*\"",
+    "fix-eslint": "npx eslint . --fix --ext .js,.jsx",
+    "fix-stylelint": "npx stylelint --fix **/*.{css,scss}",
+    "fix-prettier": "npx prettier . --write",
+    "count-docs": "ls -R src/docs | grep .md | wc -l"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.6.1",
+    "html-react-parser": "^5.1.12",
+    "next": "^14.2.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "editorconfig-checker": "^5.1.8",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.6",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.4",
     "lint-staged": "^15.2.9",
-    "markdownlint-cli": "^0.41.0"
+    "markdownlint-cli": "^0.41.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "stylelint": "^16.8.2",
+    "stylelint-config-recess-order": "^5.1.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "textlint": "^14.2.0",
+    "textlint-rule-allowed-uris": "^1.0.1"
   },
   "lint-staged": {
-    "*": "npx editorconfig-checker",
-    "*.md": "npx markdownlint"
+    "*": [
+      "npx prettier --check",
+      "npx editorconfig-checker"
+    ],
+    "*.{js,jsx}": "npx eslint",
+    "*.{css,scss}": "npx stylelint",
+    "*.md": "npx markdownlint",
+    "src/docs/**/*.md": "npx textlint -f pretty-error"
   }
 }

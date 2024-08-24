@@ -1,0 +1,5 @@
+# web-blog
+
+## v?.?.? (2024-??-??)
+
+First Release.🔥

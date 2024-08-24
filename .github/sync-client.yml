@@ -2,20 +2,35 @@ lumirlumir/lumirlumir-configs:
   - source: ./.github/sync-client.yml
     dest: ./clients/web-blog.yml
   # ./.github/workflows
+  - source: ./.github/workflows/lint.yml
+    dest: ./configs/.github/workflows/lint.yml
   - source: ./.github/workflows/sync-client.yml
     dest: ./configs/.github/workflows/sync-client.yml
   # ./.github
   - source: ./.github/dependabot.yml
     dest: ./configs/.github/dependabot.yml
+  - source: ./.github/FUNDING.yml
+    dest: ./configs/.github/FUNDING.yml
   # ./.husky
   - source: ./.husky/pre-commit
     dest: ./configs/.husky/pre-commit
+  # ./.vscode
+  - source: ./.vscode/settings.json
+    dest: ./configs/.vscode/settings.json
   # ./
   - source: ./.editorconfig
     dest: ./configs/.editorconfig
+  - source: ./.eslintignore
+    dest: ./configs/.eslintignore
+  - source: ./.gitignore
+    dest: ./configs/.gitignore
   - source: ./.markdownlint.json
     dest: ./configs/.markdownlint.json
   - source: ./.nvmrc
     dest: ./configs/.nvmrc
+  - source: ./.prettierignore
+    dest: ./configs/.prettierignore
+  - source: ./.prettierrc.js
+    dest: ./configs/.prettierrc.js
   - source: ./VScode.code-workspace
     dest: ./configs/VScode.code-workspace

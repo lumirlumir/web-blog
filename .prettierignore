@@ -10,6 +10,12 @@ build
 .env.development
 .env.production
 
-# tests
+# test
 .nyc_output
 coverage
+
+# package
+package-lock.json
+
+# markdown
+*.md
