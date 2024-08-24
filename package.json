@@ -7,12 +7,14 @@
     "start": "next start",
     "lint": "concurrently \"npm:lint-*\"",
     "lint-eslint": "npx eslint . --ext .js,.jsx",
+    "lint-stylelint": "npx stylelint **/*.{css,scss}",
     "lint-prettier": "npx prettier . --check",
     "lint-editorconfig": "npx editorconfig-checker",
     "lint-markdownlint": "npx markdownlint **/*.md",
     "lint-textlint": "npx textlint -f pretty-error src/docs",
     "fix": "concurrently \"npm:fix-*\"",
     "fix-eslint": "npx eslint . --fix --ext .js,.jsx",
+    "fix-stylelint": "npx stylelint --fix **/*.{css,scss}",
     "fix-prettier": "npx prettier . --write",
     "count-docs": "ls -R src/docs | grep .md | wc -l"
   },
@@ -34,6 +36,9 @@
     "markdownlint-cli": "^0.41.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
+    "stylelint": "^16.8.2",
+    "stylelint-config-recess-order": "^5.1.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "textlint": "^14.2.0",
     "textlint-rule-allowed-uris": "^1.0.1"
   },
@@ -43,6 +48,7 @@
       "npx editorconfig-checker"
     ],
     "*.{js,jsx}": "npx eslint",
+    "*.{css,scss}": "npx stylelint",
     "*.md": "npx markdownlint",
     "src/docs/**/*.md": "npx textlint -f pretty-error"
   }
