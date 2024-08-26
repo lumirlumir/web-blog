@@ -10,7 +10,7 @@ build
 .env.development
 .env.production
 
-# test
+# tests
 .nyc_output
 coverage
 
