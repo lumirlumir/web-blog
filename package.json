@@ -37,7 +37,7 @@
     "markdownlint-cli": "^0.41.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
-    "stylelint": "^16.8.2",
+    "stylelint": "^16.9.0",
     "stylelint-config-recess-order": "^5.1.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "textlint": "^14.2.0",
