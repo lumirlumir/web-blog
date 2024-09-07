@@ -29,7 +29,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "clang-format-node": "^1.0.0",
+    "clang-format-node": "^1.0.1",
     "concurrently": "^8.2.2",
     "editorconfig-checker": "^5.1.8",
     "eslint": "^8.57.0",
