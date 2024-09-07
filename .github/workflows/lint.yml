@@ -18,6 +18,7 @@ jobs:
     #       - markdownlint
 
     runs-on: ubuntu-latest
+    container: ubuntu:latest
 
     steps:
       - name: Set up checkout
