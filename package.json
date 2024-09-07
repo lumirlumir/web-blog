@@ -21,7 +21,7 @@
   "dependencies": {
     "@vercel/speed-insights": "^1.0.12",
     "github-markdown-css": "^5.6.1",
-    "html-react-parser": "^5.1.12",
+    "html-react-parser": "^5.1.15",
     "next": "^14.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -30,18 +30,18 @@
     "concurrently": "^8.2.2",
     "editorconfig-checker": "^5.1.8",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.6",
+    "eslint-config-next": "^14.2.7",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.5",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "markdownlint-cli": "^0.41.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
-    "stylelint": "^16.8.2",
+    "stylelint": "^16.9.0",
     "stylelint-config-recess-order": "^5.1.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "textlint": "^14.2.0",
-    "textlint-rule-allowed-uris": "^1.0.1"
+    "textlint-rule-allowed-uris": "^1.0.2"
   },
   "lint-staged": {
     "*": [
