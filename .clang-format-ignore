@@ -13,13 +13,3 @@ build
 # tests
 .nyc_output
 coverage
-
-# package
-package-lock.json
-
-# markdown
-*.md
-
-# cpp
-*.c
-*.cpp
