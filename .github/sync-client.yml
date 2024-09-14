@@ -2,6 +2,10 @@ lumirlumir/lumirlumir-configs:
   - source: ./.github/sync-client.yml
     dest: ./clients/web-blog.yml
   # ./.github/workflows
+  - source: ./.github/workflows/bump.yml
+    dest: ./configs/.github/workflows/bump.yml
+  - source: ./.github/workflows/labeler.yml
+    dest: ./configs/.github/workflows/labeler.yml
   - source: ./.github/workflows/lint.yml
     dest: ./configs/.github/workflows/lint.yml
   - source: ./.github/workflows/sync-client.yml
@@ -11,6 +15,10 @@ lumirlumir/lumirlumir-configs:
     dest: ./configs/.github/dependabot.yml
   - source: ./.github/FUNDING.yml
     dest: ./configs/.github/FUNDING.yml
+  - source: ./.github/labeler.yml
+    dest: ./configs/.github/labeler.yml
+  - source: ./.github/release.yml
+    dest: ./configs/.github/release.yml
   # ./.husky
   - source: ./.husky/pre-commit
     dest: ./configs/.husky/pre-commit
@@ -18,19 +26,31 @@ lumirlumir/lumirlumir-configs:
   - source: ./.vscode/settings.json
     dest: ./configs/.vscode/settings.json
   # ./
+  - source: ./.clang-format
+    dest: ./configs/.clang-format
+  - source: ./.clang-format-ignore
+    dest: ./configs/.clang-format-ignore
   - source: ./.editorconfig
     dest: ./configs/.editorconfig
   - source: ./.eslintignore
     dest: ./configs/.eslintignore
+  - source: ./.gitattributes
+    dest: ./configs/.gitattributes
   - source: ./.gitignore
     dest: ./configs/.gitignore
   - source: ./.markdownlint.json
     dest: ./configs/.markdownlint.json
+  - source: ./.markdownlintignore
+    dest: ./configs/.markdownlintignore
   - source: ./.nvmrc
     dest: ./configs/.nvmrc
   - source: ./.prettierignore
     dest: ./configs/.prettierignore
   - source: ./.prettierrc.js
     dest: ./configs/.prettierrc.js
+  - source: ./.stylelintrc.js
+    dest: ./configs/.stylelintrc.js
+  - source: ./jsconfig.json
+    dest: ./configs/jsconfig.json
   - source: ./VScode.code-workspace
     dest: ./configs/VScode.code-workspace
