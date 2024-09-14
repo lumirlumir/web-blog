@@ -1,6 +1,8 @@
 import { promises as fs } from 'fs';
 import Link from 'next/link';
 
+import { DOCS } from '@/constants/path';
+
 import styles from './Aside.module.scss';
 
 export default async function Aside() {
@@ -16,7 +18,7 @@ export default async function Aside() {
   );
 }
 
-const dirs = await fs.readdir(`${process.cwd()}/src/docs`, {
+const dirs = await fs.readdir(DOCS, {
   encoding: 'utf-8',
   recursive: true,
 });

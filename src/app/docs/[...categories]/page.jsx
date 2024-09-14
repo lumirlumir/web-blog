@@ -2,10 +2,11 @@ import { promises as fs } from 'fs';
 import parse from 'html-react-parser';
 
 import { REPOSITORY } from '@/constants/github';
+import { DOCS } from '@/constants/path';
 import Article from '@/layouts/Article';
 
 export async function generateStaticParams() {
-  const paths = await fs.readdir(`${process.cwd()}/src/docs`, {
+  const paths = await fs.readdir(DOCS, {
     encoding: 'utf-8',
     recursive: true,
   });
@@ -19,7 +20,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const markdown = await fs.readFile(
-    `${process.cwd()}/src/docs/${params.categories.join('/')}.md`,
+    `${DOCS}/${params.categories.join('/')}.md`,
     'utf-8',
   );
 
