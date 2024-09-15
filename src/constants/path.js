@@ -1,1 +1,3 @@
-export const DOCS = `${process.cwd()}/src/docs`;
+import { join } from 'path';
+
+export const DOCS = join(process.cwd(), 'src', 'docs');
