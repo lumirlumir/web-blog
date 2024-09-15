@@ -1,3 +1,3 @@
-import path from 'path';
+import { join } from 'path';
 
-export const DOCS = path.join(process.cwd(), 'src', 'docs');
+export const DOCS = join(process.cwd(), 'src', 'docs');
