@@ -9,6 +9,8 @@ import Main from '@/components/layouts/Main';
 import Categories from '@/components/aside/Categories';
 import Home from '@/components/aside/Home';
 
+import Title from '@/components/header/Title';
+
 // TODO: import '@/styles/global.scss';
 
 // TODO: export const metadata = {
@@ -20,7 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko">
       <Body>
-        <Header />
+        <Header>
+          <Title />
+        </Header>
         <Aside>
           <Home />
           <Categories />
