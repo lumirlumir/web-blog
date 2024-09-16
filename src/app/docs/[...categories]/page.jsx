@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 
 import { REPOSITORY } from '@/constants/github';
 import { DOCS } from '@/constants/path';
-import Article from '@/layouts/Article';
+import Article from '@/components/layouts/Article';
 
 export async function generateStaticParams() {
   const paths = await fs.readdir(DOCS, {

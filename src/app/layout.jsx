@@ -1,9 +1,9 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import Aside from '@/layouts/Aside';
-import Body from '@/layouts/Body';
-import Header from '@/layouts/Header';
-import Main from '@/layouts/Main';
+import Aside from '@/components/layouts/Aside';
+import Body from '@/components/layouts/Body';
+import Header from '@/components/layouts/Header';
+import Main from '@/components/layouts/Main';
 
 import Categories from '@/components/aside/Categories';
 import Home from '@/components/aside/Home';
