@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs';
-import parse from 'html-react-parser';
+import { join, sep } from 'path';
 
-import { REPOSITORY } from '@/constants/github';
 import { DOCS } from '@/constants/path';
+import markdownToJsx from '@/utils/markdownToJsx';
 
 export async function generateStaticParams() {
   const paths = await fs.readdir(DOCS, {
@@ -18,42 +18,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }) {
-  const markdown = await fs.readFile(
-    `${DOCS}/${params.categories.join('/')}.md`,
-    'utf-8',
-  );
+  const filePath = join(DOCS, `${params.categories.join(sep)}.md`);
 
-  return <>{await markdownToJsx(markdown)}</>;
-}
-
-async function markdownToHtml(markdown) {
-  const response = await fetch('https://api.github.com/markdown', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/vnd.github+json',
-      'Content-Type': 'application/json',
-      'X-GitHub-Api-Version': '2022-11-28',
-    },
-    body: JSON.stringify({
-      text: markdown,
-      mode: 'gfm',
-      context: REPOSITORY.fullName,
-    }),
-  });
-
-  return response.text();
-}
-
-function htmlToJsx(html) {
-  return parse(html, {
-    replace: ({ name, attribs }) => {
-      if (name === 'img' && attribs.src.startsWith('/public')) {
-        attribs.src = attribs.src.replace(/^\/public/, '');
-      }
-    },
-  });
-}
-
-async function markdownToJsx(markdown) {
-  return htmlToJsx(await markdownToHtml(markdown));
+  return <>{await markdownToJsx(filePath)}</>;
 }
