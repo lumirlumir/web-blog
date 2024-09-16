@@ -1,17 +1,12 @@
-import Link from 'next/link';
-
 import Categories from '@/components/aside/Categories';
+import Home from '@/components/aside/Home';
 
 import styles from './Aside.module.scss';
 
 export default async function Aside() {
   return (
     <aside className={styles.aside}>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-      </ul>
+      <Home />
       <Categories />
     </aside>
   );
