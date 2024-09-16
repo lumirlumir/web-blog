@@ -3,7 +3,6 @@ import parse from 'html-react-parser';
 
 import { REPOSITORY } from '@/constants/github';
 import { DOCS } from '@/constants/path';
-import Article from '@/layouts/Article';
 
 export async function generateStaticParams() {
   const paths = await fs.readdir(DOCS, {
@@ -24,7 +23,7 @@ export default async function Page({ params }) {
     'utf-8',
   );
 
-  return <Article>{await markdownToJsx(markdown)}</Article>;
+  return <>{await markdownToJsx(markdown)}</>;
 }
 
 async function markdownToHtml(markdown) {
