@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Article from '@/components/layouts/Article';
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
           <Article>{children}</Article>
         </Main>
 
+        <Analytics />
         <SpeedInsights />
       </Body>
     </html>
