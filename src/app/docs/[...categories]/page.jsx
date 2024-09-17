@@ -6,14 +6,13 @@ import markdownToJsx from '@/utils/markdownToJsx';
 
 export async function generateStaticParams() {
   const paths = await fs.readdir(DOCS, {
-    encoding: 'utf-8',
     recursive: true,
   });
 
   return paths
     .filter(path => path.endsWith('.md'))
     .map(path => ({
-      categories: path.replace(/\\/g, '/').replace('.md', '').split('/'),
+      categories: path.replace(/\.md$/, '').split(sep),
     }));
 }
 
