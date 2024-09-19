@@ -19,7 +19,7 @@
     "fix-stylelint": "npx stylelint --fix **/*.{css,scss}",
     "fix-prettier": "npx prettier . --write",
     "fix-clangformat": "find . -name '*.c' -o -name '*.cpp' -print0 | xargs -0 npx clang-format -i",
-    "count-docs": "ls -R src/docs | grep .md | wc -l"
+    "count-docs": "ls -R src/posts/docs | grep .md | wc -l"
   },
   "dependencies": {
     "@vercel/analytics": "^1.3.1",
