@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 
 import parse from 'html-react-parser';
+import matter from 'gray-matter';
 
 import { REPOSITORY } from '@/constants/github';
 
@@ -12,7 +13,13 @@ import { REPOSITORY } from '@/constants/github';
  * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
  */
 export default async function markdownToJsx(filePath) {
-  const markdown = await readMarkdown(filePath);
+  const markdownWithFrontMatter = await readMarkdownWithFrontMatter(filePath);
+
+  const markdown = writeTitleIntoMarkdown(
+    markdownWithFrontMatter.data.title,
+    markdownWithFrontMatter.content,
+  );
+
   const html = await markdownToHtml(markdown);
   const jsx = htmlToJsx(html);
 
@@ -20,14 +27,25 @@ export default async function markdownToJsx(filePath) {
 }
 
 /**
- * Reads a markdown file.
+ * Reads a markdown file with a front matter block.
  *
  * @async
- * @param {string} filePath Path to the markdown file.
- * @returns {Promise<string>} A promise that resolves to the markdown content.
+ * @param {string} filePath Path to the markdown file with a front matter block.
+ * @returns {Promise<string>} A promise that resolves to the markdown content with a front matter block.
  */
-export async function readMarkdown(filePath) {
-  return await fs.readFile(filePath, 'utf-8');
+export async function readMarkdownWithFrontMatter(filePath) {
+  return matter(await fs.readFile(filePath, 'utf-8'));
+}
+
+/**
+ * Adds a title as a top-level heading to the given markdown content.
+ *
+ * @param {string} title The title to add as a heading.
+ * @param {string} markdown The markdown content.
+ * @returns {string} The markdown content with the title as a heading, if provided.
+ */
+export function writeTitleIntoMarkdown(title, markdown) {
+  return `${title ? `# ${title}\n\n` : ''}${markdown}`;
 }
 
 /**

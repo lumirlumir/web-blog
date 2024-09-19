@@ -2,6 +2,7 @@
 export const USER = Object.freeze({
   login: 'lumirlumir',
   name: '루밀LuMir',
+  bio: 'ᗩᖇTIᔕT🎨『PLAY KEYBOARD, STRIKE A CODE』',
   get htmlUrl() {
     return `https://github.com/${this.login}`;
   },
