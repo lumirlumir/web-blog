@@ -1,4 +1,7 @@
-# NPM Package React: `react`, `react-dom`
+---
+title: 'NPM Package React: `react`, `react-dom`'
+description: '`react`는 UI 컴포넌트를 생성하는 핵심 라이브러리이고, `react-dom`은 이를 웹 브라우저의 DOM에 렌더링하는 역할을 하며 두 라이브러리는 함께 사용된다.'
+---
 
 React 개발의 필수 요소인 `react`, `react-dom`에 대해 알아보자.
 

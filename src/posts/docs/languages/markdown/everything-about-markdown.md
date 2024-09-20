@@ -1,6 +1,9 @@
-<!-- markdownlint-disable MD003 MD004 MD024 MD029 MD033 MD035 MD046 MD049 MD050 MD055-->
-# 마크다운(***Markdown***)의 모든 것
+---
+title: '마크다운(***Markdown***)의 모든 것'
+description: '마크다운(Markdown) 및 GFM(GitHub Flavored Markdown)에 대한 개념, 문법, 사용법, 활용법 총 정리.'
+---
 
+<!-- markdownlint-disable MD003 MD004 MD024 MD029 MD033 MD035 MD046 MD049 MD050 MD055-->
 ***Markdown*** 파일의 확장자는 `.md`로 끝난다. 개발을 하다 보면 `README.md`라는 이름의 파일을 한 번쯤 만나게 되는데, 이것이 가장 대표적인 ***Markdown*** 파일이라 할 수 있다.
 
 ***Markdown***과 비슷하지만 문법이 좀 더 복잡한 `.adoc` 확장자의 ***AsciiDoc*** 문법도 있으며, 좀 더 다양한 형태의 문서를 만들 수 있다.
