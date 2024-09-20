@@ -1,4 +1,7 @@
-# HTML에서 공백을 다루는 방법: `&nbsp;`, `&ensp;`, `&emsp;`
+---
+title: 'HTML에서 공백을 다루는 방법: `&nbsp;`, `&ensp;`, `&emsp;`'
+description: '`&nbsp;`, `&ensp;`, `&emsp;`는 각각 1칸, 2칸, 3칸 정도 너비의 공백을 생성한다.'
+---
 
 HTML의 경우 연속된 공백을 하나의 공백으로 처리하는 성질이 있기에, 공백 특수문자, 정확히는 [HTML 엔터티(Entity)](https://developer.mozilla.org/ko/docs/Glossary/Entity)를 이용하여 연속된 공백을 처리할 수 있다.
 

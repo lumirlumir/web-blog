@@ -1,4 +1,7 @@
-# Next.js에서 File-based Metadata를 이용할 때, Favicon이 정상적으로 반영되지 않는 현상
+---
+title: 'Next.js에서 File-based Metadata를 이용할 때, Favicon이 정상적으로 반영되지 않는 현상'
+description: 'Favicon이 Next.js의 App Router에서 변경되지 않는 문제는 브라우저의 캐싱 때문일 수 있으며, 개발자 도구를 통해 캐시 비우기 및 강력 새로고침을 수행하면 해결될 가능성이 높다.'
+---
 
 Next.js의 App Router에서는 [File-based Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata#file-based-metadata)를 이용하여, Favicon을 설정할 수 있다. 하지만, `app` 혹은 `src/app` 등 공식 문서에서 언급된 정상 경로에 Favicon 파일을 두었음에도, 해당 Favicon으로 변경되지 않는 문제가 발생한다.
 

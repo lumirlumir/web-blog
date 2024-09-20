@@ -1,4 +1,7 @@
-# NPM Package Babel: `@babel/core`, `@babel/cli`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`
+---
+title: 'NPM Package Babel: `@babel/core`, `@babel/cli`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`'
+description: 'Babel은 최신 자바스크립트 문법을 구버전 문법으로 변환하여 다양한 실행 환경에서 호환성을 제공하는 트랜스파일러로, ES6+ 코드뿐만 아니라 TypeScript와 JSX도 지원하며, 개발의존성으로 설치하여 사용할 수 있다.'
+---
 
 개발자들이 실행 환경에 구애받지 않고 항상 최신 문법의 자바스크립트로 코딩할 수 있도록 도와주는 유용한 도구인 바벨(Babel)에 대해 알아보자. 아래 내용들은 Babel 7 기반의 설명들이다.
 
