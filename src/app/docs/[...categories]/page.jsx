@@ -3,6 +3,7 @@ import { join, sep } from 'path';
 
 import { DOCS } from '@/constants/path';
 import markdownToJsx, { readMarkdownWithFrontMatter } from '@/utils/markdownToJsx';
+import markdownToText from '@/utils/markdownToText';
 
 /* Custom Declaration */
 function getFilePath(params) {
@@ -31,8 +32,8 @@ export async function generateMetadata({ params }) {
   } = await readMarkdownWithFrontMatter(getFilePath(params));
 
   return {
-    title,
-    description,
+    title: markdownToText(title),
+    description: markdownToText(description),
   };
 }
 
