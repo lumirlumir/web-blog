@@ -81,10 +81,13 @@ export async function markdownToHtml(markdown) {
  */
 export function htmlToJsx(html) {
   return parse(html, {
-    replace: ({ name, attribs }) => {
-      // img-attribute-src
-      if (name === 'img' && attribs.src.startsWith('/public')) {
-        attribs.src = attribs.src.replace(/^\/public/, '');
+    replace({ name, attribs }) {
+      // <img>
+      if (name === 'img') {
+        attribs.src = attribs.src.startsWith('/public')
+          ? attribs.src.replace(/^\/public/, '')
+          : attribs.src;
+        attribs.loading = 'lazy';
       }
     },
   });
