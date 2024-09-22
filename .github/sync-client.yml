@@ -18,6 +18,8 @@ lumirlumir/lumirlumir-configs:
   - source: ./.github/workflows/sync-client.yml
     dest: ./configs/.github/workflows/sync-client.yml
   # ./.github
+  - source: ./.github/CODEOWNERS
+    dest: ./configs/.github/CODEOWNERS
   - source: ./.github/dependabot.yml
     dest: ./configs/.github/dependabot.yml
   - source: ./.github/FUNDING.yml
