@@ -45,7 +45,7 @@
     "prettier": "^3.3.3",
     "sass": "^1.78.0",
     "stylelint": "^16.9.0",
-    "stylelint-config-recess-order": "^5.1.0",
+    "stylelint-config-recess-order": "^5.1.1",
     "stylelint-config-standard-scss": "^13.1.0",
     "textlint": "^14.2.0",
     "textlint-rule-allowed-uris": "^1.0.4"
