@@ -1,6 +1,8 @@
 ---
 title: "GitHub's classic branch protection rules"
 description: 'Branch 보호 규칙은 GitHub에서 협업 시 혼란을 방지하기 위해 특정 Branch에 대한 접근과 변경 사항을 관리하는 필수 규칙으로, PR 요구, 승인, 상태 체크 등 다양한 설정을 통해 코드 품질과 협업 효율성을 높인다.'
+tags:
+  - 'git'
 ---
 
 Branch 보호 규칙(Branch Protection Rules)을 설정하는 것은 중요한 일이다. 협업에 규칙이 없다면, 각자 자신의 방식대로 일을 진행하기에 프로젝트는 엉망이 될 것이다. 인원이 적다면 큰 문제는 아니겠지만, 실무에서 적게는 2명 많게는 수십 수백명이 하나의 저장소를 관리하기에 규칙은 필수적이다. 특히 Git의 Branch는 협업을 위한 기본 토대이기에, 규칙을 정해야만 협업 시의 혼란을 방지할 수 있다.

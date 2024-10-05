@@ -1,6 +1,8 @@
 ---
 title: '마크다운(***Markdown***)의 모든 것'
 description: '마크다운(Markdown) 및 GFM(GitHub Flavored Markdown)에 대한 개념, 문법, 사용법, 활용법 총 정리.'
+tags:
+  - 'markdown'
 ---
 
 <!-- markdownlint-disable MD003 MD004 MD024 MD029 MD033 MD035 MD046 MD049 MD050 MD055-->

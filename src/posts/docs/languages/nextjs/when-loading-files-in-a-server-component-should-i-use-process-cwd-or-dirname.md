@@ -1,6 +1,8 @@
 ---
 title: '서버 컴포넌트에서 파일을 불러올 때, `process.cwd()`와 `__dirname` 중 어떤 것을 사용해야 할까?'
 description: 'Next.js에서는 번들링 후 경로가 변경될 수 있는 `__dirname`보다, 항상 프로젝트 루트 디렉토리를 가리키는 `process.cwd()`를 사용하는 것이 파일 경로 관리에 더 안정적이다.'
+tags:
+  - 'nextjs'
 ---
 
 **Vercel**(**Next.js**)의 공식 가이드 [How to Load Data from a File in Next.js](https://vercel.com/guides/loading-static-file-nextjs-api-route)를 읽다 문득 궁금한 점이 생겼다.

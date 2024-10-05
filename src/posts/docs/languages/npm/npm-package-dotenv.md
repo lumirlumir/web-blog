@@ -1,6 +1,8 @@
 ---
 title: 'NPM Package Dotenv: `dotenv`, `dotenv-webpack`'
 description: '`dotenv` 라이브러리를 사용하면 Node.js 프로젝트에서 환경 변수를 `.env` 파일로 관리하고 쉽게 접근할 수 있으며, 이를 통해 개발 환경에 따라 다른 설정을 안전하게 사용할 수 있다.'
+tags:
+  - 'npm'
 ---
 
 `dotenv`를 통해 환경 변수를 `.env` 파일로 관리하는 방법에 대해 알아보자.

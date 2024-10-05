@@ -1,6 +1,8 @@
 ---
 title: '자바스크립트 CommonJS 및 ES 모듈 내보내기/불러오기 (`require` 및 `import`)'
 description: 'Node.js에서 모듈을 불러오는 방법으로 `require`(CommonJS)와 `import`(ES6)가 있으며, 각각의 사용법과 장단점이 있다. CommonJS는 하위 호환성을 유지하며, `exports`와 `module.exports`를 통해 객체를 내보내고 불러온다. 반면, ES6 모듈은 가독성이 높고 성능이 우수하며, `export`와 `default export`를 사용해 더 명확하게 모듈을 관리한다. ES 모듈을 사용할 때는 `.js` 확장자를 붙여야 한다.'
+tags:
+  - 'nodejs'
 ---
 
 자바스크립트 개발을 하다보면 `require`나 `import` 키워드를 통해 외부 라이브러리를 불러오는 코드를 자주 보게 된다. `require`는 Node.js에서 예전부터 사용되고 있는 CommonJS의 키워드이고, `import`는 ES6(ES2015)에서 새롭게 도입되어 현재 자바스크립트 생태계에서 표준이 되어가고 있는 키워드이다. 두 개의 키워드 모두 하나의 파일에서 다른 파일의 코드를 불러온다는 동일한 목적을 가지고 있지만, 비슷한듯 약간씩 다른 문법 때문에 개발자들을 혼란스럽게 하기도 한다.
