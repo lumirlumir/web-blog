@@ -20,7 +20,7 @@ function renderDirTree(dirTree, basePath = '') {
         return (
           <li key={currPath}>
             {dirTreeNode.name.endsWith('.md') ? (
-              <Link href={`/docs/${currPath.replace('.md', '')}`}>
+              <Link href={`/posts/${currPath.replace('.md', '')}`}>
                 {dirTreeNode.name.replace('.md', '')}
               </Link>
             ) : (

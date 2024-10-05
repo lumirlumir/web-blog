@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { join, sep } from 'path';
+import { join } from 'path';
 
 import { DOCS } from '@/constants/path';
 import markdownToJsx, { readMarkdownWithFrontMatter } from '@/utils/markdownToJsx';
@@ -7,7 +7,7 @@ import markdownToText from '@/utils/markdownToText';
 
 /* Custom Declaration */
 function getFilePath(params) {
-  return join(DOCS, `${params.categories.join(sep)}.md`);
+  return join(DOCS, `${params.markdown}.md`);
 }
 
 /* Next.js Declaration */
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   return paths
     .filter(path => path.endsWith('.md'))
     .map(path => ({
-      categories: path.replace(/\.md$/, '').split(sep),
+      markdown: path.replace(/\.md$/, ''),
     }));
 }
 
