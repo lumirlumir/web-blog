@@ -17,7 +17,7 @@ function getFilePath(params) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const paths = await readDirByExtension(DOCS, md, { recursive: true });
+  const paths = await readDirByExtension(DOCS, md);
 
   return paths.map(path => ({
     markdown: path.replace(mdRegExp, ''),

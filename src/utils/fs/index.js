@@ -46,10 +46,14 @@ export async function readFileForMarkdown(filePath, option = 'content') {
  * @async
  * @param {string} dirPath The path to the directory.
  * @param {string} extension The file extension to filter by. `extension` cannot be a RegExp. It must be a string.
- * @param {ObjectEncodingOptions & {withFileTypes?: false | undefined; recursive?: boolean | undefined;}} [options] Optional `readdir` options.
+ * @param {ObjectEncodingOptions & {withFileTypes?: false | undefined; recursive?: boolean | undefined;}} [options = { recursive: true }] Optional `readdir` options.
  * @returns {Promise<string[]>} An array of file paths.
  */
-export async function readDirByExtension(dirPath, extension, options) {
+export async function readDirByExtension(
+  dirPath,
+  extension,
+  options = { recursive: true },
+) {
   const filePaths = await fs.readdir(dirPath, options);
 
   return filePaths.filter(filePath => filePath.endsWith(extension));
