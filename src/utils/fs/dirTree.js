@@ -1,8 +1,9 @@
+// @ts-check
 import { promises as fs } from 'fs';
 import { join } from 'path';
 
 /**
- *  @typedef {import("@/types").DirTreeNode} DirTreeNode
+ * @typedef {import('@/types').DirTreeNode} DirTreeNode
  */
 
 /**

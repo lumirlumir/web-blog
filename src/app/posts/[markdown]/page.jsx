@@ -1,8 +1,7 @@
-import { promises as fs } from 'fs';
 import { join } from 'path';
 
 import { DOCS, EXTENSION } from '@/constants/path';
-import { readFileForMarkdown } from '@/utils/fs';
+import { readFileForMarkdown, readDirByExtension } from '@/utils/fs';
 import markdownToJsx from '@/utils/markdownToJsx';
 import markdownToText from '@/utils/markdownToText';
 
@@ -18,15 +17,11 @@ function getFilePath(params) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const paths = await fs.readdir(DOCS, {
-    recursive: true,
-  });
+  const paths = await readDirByExtension(DOCS, md, { recursive: true });
 
-  return paths
-    .filter(path => path.endsWith(md))
-    .map(path => ({
-      markdown: path.replace(mdRegExp, ''),
-    }));
+  return paths.map(path => ({
+    markdown: path.replace(mdRegExp, ''),
+  }));
 }
 
 export async function generateMetadata({ params }) {
