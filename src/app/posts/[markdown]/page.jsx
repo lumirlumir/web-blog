@@ -2,7 +2,7 @@ import { promises as fs } from 'fs';
 import { join } from 'path';
 
 import { DOCS, EXTENSION } from '@/constants/path';
-import { readMarkdown } from '@/utils/fs';
+import { readFileForMarkdown } from '@/utils/fs';
 import markdownToJsx from '@/utils/markdownToJsx';
 import markdownToText from '@/utils/markdownToText';
 
@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await readMarkdown(getFilePath(params), 'data');
+  const { title, description } = await readFileForMarkdown(getFilePath(params), 'data');
 
   return {
     title: markdownToText(title),

@@ -22,7 +22,7 @@ export async function readFile(filePath) {
  * @returns {Promise<string | {[key: string]: any}>} The content or data(front matter) of the file.
  * @throws {TypeError} If the option is invalid.
  */
-export async function readMarkdown(filePath, option = 'content') {
+export async function readFileForMarkdown(filePath, option = 'content') {
   const { content, data } = matter(await readFile(filePath));
 
   switch (option) {

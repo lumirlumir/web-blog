@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
 
 import { REPOSITORY } from '@/constants/github';
-import { readMarkdown } from './fs';
+import { readFileForMarkdown } from './fs';
 
 /**
  * Converts a markdown content to JSX.
@@ -11,10 +11,10 @@ import { readMarkdown } from './fs';
  * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
  */
 export default async function markdownToJsx(filePath) {
-  const { title } = await readMarkdown(filePath, 'data');
+  const { title } = await readFileForMarkdown(filePath, 'data');
   const markdownContent = writeTitleIntoMarkdown(
     title,
-    await readMarkdown(filePath, 'content'),
+    await readFileForMarkdown(filePath, 'content'),
   );
 
   const html = await markdownToHtml(markdownContent);
