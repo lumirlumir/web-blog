@@ -2,14 +2,11 @@ import { join } from 'path';
 
 import Link from 'next/link';
 
-import { DOCS } from '@/constants/path';
+import { DOCS, EXTENSION } from '@/constants/path';
 import { getDirTree } from '@/utils/dirTree';
 
-export default async function Categories() {
-  const dirTree = await getDirTree(DOCS);
-
-  return <>{renderDirTree(dirTree)}</>;
-}
+/* Custom Declaration */
+const { md, mdRegExp } = EXTENSION;
 
 function renderDirTree(dirTree, basePath = '') {
   return (
@@ -19,9 +16,9 @@ function renderDirTree(dirTree, basePath = '') {
 
         return (
           <li key={currPath}>
-            {dirTreeNode.name.endsWith('.md') ? (
-              <Link href={`/posts/${currPath.replace('.md', '')}`}>
-                {dirTreeNode.name.replace('.md', '')}
+            {dirTreeNode.name.endsWith(md) ? (
+              <Link href={`/posts/${currPath.replace(mdRegExp, '')}`}>
+                {dirTreeNode.name.replace(mdRegExp, '')}
               </Link>
             ) : (
               <>
@@ -34,4 +31,11 @@ function renderDirTree(dirTree, basePath = '') {
       })}
     </ul>
   );
+}
+
+/* React Declaration */
+export default async function Categories() {
+  const dirTree = await getDirTree(DOCS);
+
+  return <>{renderDirTree(dirTree)}</>;
 }

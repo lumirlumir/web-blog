@@ -1,13 +1,16 @@
 import { promises as fs } from 'fs';
 import { join } from 'path';
 
-import { DOCS } from '@/constants/path';
-import markdownToJsx, { readMarkdownWithFrontMatter } from '@/utils/markdownToJsx';
+import { DOCS, EXTENSION } from '@/constants/path';
+import { readMarkdown } from '@/utils/fs';
+import markdownToJsx from '@/utils/markdownToJsx';
 import markdownToText from '@/utils/markdownToText';
 
 /* Custom Declaration */
+const { md, mdRegExp } = EXTENSION;
+
 function getFilePath(params) {
-  return join(DOCS, `${params.markdown}.md`);
+  return join(DOCS, `${params.markdown}${md}`);
 }
 
 /* Next.js Declaration */
@@ -20,16 +23,14 @@ export async function generateStaticParams() {
   });
 
   return paths
-    .filter(path => path.endsWith('.md'))
+    .filter(path => path.endsWith(md))
     .map(path => ({
-      markdown: path.replace(/\.md$/, ''),
+      markdown: path.replace(mdRegExp, ''),
     }));
 }
 
 export async function generateMetadata({ params }) {
-  const {
-    data: { title, description },
-  } = await readMarkdownWithFrontMatter(getFilePath(params));
+  const { title, description } = await readMarkdown(getFilePath(params), 'data');
 
   return {
     title: markdownToText(title),

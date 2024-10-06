@@ -1,61 +1,47 @@
-import { promises as fs } from 'fs';
-
 import parse from 'html-react-parser';
-import matter from 'gray-matter';
 
 import { REPOSITORY } from '@/constants/github';
+import { readMarkdown } from './fs';
 
 /**
- * Converts a markdown file to JSX.
+ * Converts a markdown content to JSX.
  *
  * @async
  * @param {string} filePath Path to the markdown file.
  * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
  */
 export default async function markdownToJsx(filePath) {
-  const markdownWithFrontMatter = await readMarkdownWithFrontMatter(filePath);
-
-  const markdown = writeTitleIntoMarkdown(
-    markdownWithFrontMatter.data.title,
-    markdownWithFrontMatter.content,
+  const { title } = await readMarkdown(filePath, 'data');
+  const markdownContent = writeTitleIntoMarkdown(
+    title,
+    await readMarkdown(filePath, 'content'),
   );
 
-  const html = await markdownToHtml(markdown);
+  const html = await markdownToHtml(markdownContent);
   const jsx = htmlToJsx(html);
 
   return jsx;
 }
 
 /**
- * Reads a markdown file with a front matter block.
- *
- * @async
- * @param {string} filePath Path to the markdown file with a front matter block.
- * @returns {Promise<string>} A promise that resolves to the markdown content with a front matter block.
- */
-export async function readMarkdownWithFrontMatter(filePath) {
-  return matter(await fs.readFile(filePath, 'utf-8'));
-}
-
-/**
  * Adds a title as a top-level heading to the given markdown content.
  *
  * @param {string} title The title to add as a heading.
- * @param {string} markdown The markdown content.
+ * @param {string} markdownContent The markdown content.
  * @returns {string} The markdown content with the title as a heading, if provided.
  */
-export function writeTitleIntoMarkdown(title, markdown) {
-  return `${title ? `# ${title}\n\n` : ''}${markdown}`;
+export function writeTitleIntoMarkdown(title, markdownContent) {
+  return `${title ? `# ${title}\n\n` : ''}${markdownContent}`;
 }
 
 /**
- * Converts markdown text to HTML using GitHub's Markdown API.
+ * Converts markdown content to HTML using GitHub's Markdown API.
  *
  * @async
- * @param {string} markdown The markdown content.
+ * @param {string} markdownContent The markdown content.
  * @returns {Promise<string>} A promise that resolves to HTML.
  */
-export async function markdownToHtml(markdown) {
+export async function markdownToHtml(markdownContent) {
   const response = await fetch('https://api.github.com/markdown', {
     method: 'POST',
     headers: {
@@ -64,7 +50,7 @@ export async function markdownToHtml(markdown) {
       'X-GitHub-Api-Version': '2022-11-28',
     },
     body: JSON.stringify({
-      text: markdown,
+      text: markdownContent,
       mode: 'gfm',
       context: REPOSITORY.fullName,
     }),
