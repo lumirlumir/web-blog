@@ -3,7 +3,7 @@ import { join } from 'path';
 import Link from 'next/link';
 
 import { DOCS, EXTENSION } from '@/constants/path';
-import { getDirTree } from '@/utils/dirTree';
+import { readDirTree } from '@/utils/dirTree';
 
 /* Custom Declaration */
 const { md, mdRegExp } = EXTENSION;
@@ -35,7 +35,7 @@ function renderDirTree(dirTree, basePath = '') {
 
 /* React Declaration */
 export default async function Categories() {
-  const dirTree = await getDirTree(DOCS);
+  const dirTree = await readDirTree(DOCS);
 
   return <>{renderDirTree(dirTree)}</>;
 }
