@@ -1,13 +1,15 @@
-import { promises as fs } from 'fs';
-import { join, sep } from 'path';
+import { join } from 'path';
 
-import { DOCS } from '@/constants/path';
-import markdownToJsx, { readMarkdownWithFrontMatter } from '@/utils/markdownToJsx';
+import { DOCS, EXTENSION } from '@/constants/path';
+import { readFileForMarkdown, readDirByExtension } from '@/utils/fs';
+import markdownToJsx from '@/utils/markdownToJsx';
 import markdownToText from '@/utils/markdownToText';
 
 /* Custom Declaration */
+const { md, mdRegExp } = EXTENSION;
+
 function getFilePath(params) {
-  return join(DOCS, `${params.categories.join(sep)}.md`);
+  return join(DOCS, `${params.markdown}${md}`);
 }
 
 /* Next.js Declaration */
@@ -15,21 +17,15 @@ function getFilePath(params) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const paths = await fs.readdir(DOCS, {
-    recursive: true,
-  });
+  const paths = await readDirByExtension(DOCS, md);
 
-  return paths
-    .filter(path => path.endsWith('.md'))
-    .map(path => ({
-      categories: path.replace(/\.md$/, '').split(sep),
-    }));
+  return paths.map(path => ({
+    markdown: path.replace(mdRegExp, ''),
+  }));
 }
 
 export async function generateMetadata({ params }) {
-  const {
-    data: { title, description },
-  } = await readMarkdownWithFrontMatter(getFilePath(params));
+  const { title, description } = await readFileForMarkdown(getFilePath(params), 'data');
 
   return {
     title: markdownToText(title),

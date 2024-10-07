@@ -1,37 +1,20 @@
-import { join } from 'path';
-
 import Link from 'next/link';
 
 import { DOCS } from '@/constants/path';
-import { getDirTree } from '@/utils/dirTree';
+import { readTagTree } from '@/utils/fs/tagTree';
 
+/* React Declaration */
 export default async function Categories() {
-  const dirTree = await getDirTree(DOCS);
+  const tagTree = await readTagTree(DOCS);
 
-  return <>{renderDirTree(dirTree)}</>;
-}
-
-function renderDirTree(dirTree, basePath = '') {
   return (
     <ul>
-      {dirTree.map(dirTreeNode => {
-        const currPath = join(basePath, dirTreeNode.name);
-
-        return (
-          <li key={currPath}>
-            {dirTreeNode.name.endsWith('.md') ? (
-              <Link href={`/docs/${currPath.replace('.md', '')}`}>
-                {dirTreeNode.name.replace('.md', '')}
-              </Link>
-            ) : (
-              <>
-                <span>{dirTreeNode.name}</span>
-                {renderDirTree(dirTreeNode.children, currPath)}
-              </>
-            )}
-          </li>
-        );
-      })}
+      {Object.keys(tagTree).map(key => (
+        <li key={key}>
+          <Link href={`/categories/${key}`}>{key}</Link>
+          <span>&nbsp;({tagTree[key].length})</span>
+        </li>
+      ))}
     </ul>
   );
 }

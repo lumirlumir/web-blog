@@ -1,11 +1,9 @@
+// @ts-check
 import { promises as fs } from 'fs';
 import { join } from 'path';
 
 /**
- * @typedef {object} DirTreeNode
- *
- * @property {string} name The name of the node.
- * @property {Array<DirTreeNode>} [children] The array of child nodes if the node is a directory. This is a recursive structure.
+ * @typedef {import('@/types').DirTreeNode} DirTreeNode
  */
 
 /**
@@ -13,14 +11,13 @@ import { join } from 'path';
  *
  * @async
  * @param {string} dirPath The path of the directory.
- * @returns {Promise<Array<DirTreeNode>>} A promise that resolves to an array of `DirTreeNode`.
- *
+ * @returns {Promise<DirTreeNode[]>} A promise that resolves to an array of `DirTreeNode`.
  * @example
- * // Get the directory tree structure
- * const dirTree = await getDirTree('/path/to/dir');
+ * // Read the directory tree structure
+ * const dirTree = await readDirTree('/path/to/dir');
  * console.log(dirTree);
  */
-export async function getDirTree(dirPath) {
+export async function readDirTree(dirPath) {
   // `readdir` automatically throws an error when `dirPath` is not a directory.
   const dirents = await fs.readdir(dirPath, { withFileTypes: true });
 
@@ -28,7 +25,7 @@ export async function getDirTree(dirPath) {
     dirents.map(async dirent => ({
       name: dirent.name,
       ...(dirent.isDirectory()
-        ? { children: await getDirTree(join(dirPath, dirent.name)) }
+        ? { children: await readDirTree(join(dirPath, dirent.name)) }
         : {}),
     })),
   );
@@ -39,12 +36,11 @@ export async function getDirTree(dirPath) {
  *
  * @param {DirTreeNode} dirTreeNode The `DirTreeNode` object.
  * @returns {boolean} `true` if the node is a directory. otherwise, `false`.
- *
  * @example
  * // Check if a node is a directory
- * const isDir = isDirectory({ name: 'folder', children: [...] });
+ * const isDir = isDir({ name: 'folder', children: [...] });
  * console.log(isDir); // true
  */
-export function isDirectory(dirTreeNode) {
+export function isDir(dirTreeNode) {
   return Boolean(dirTreeNode.children);
 }
