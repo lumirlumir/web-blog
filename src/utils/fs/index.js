@@ -23,11 +23,11 @@ export async function readFile(filePath) {
  *
  * @async
  * @param {string} filePath The path to the Markdown file.
- * @param {'content' | 'data'} [option='content'] The type of data to return.
- * @returns {Promise<string | {[key: string]: any}>} The content or data(front matter) of the file.
+ * @param {'content' | 'data' | 'all'} [option='all'] The type of data to return.
+ * @returns {Promise<string | {[key: string]: any} | {content: string, data: {[key: string]: any}}>} The content or data(front matter) of the file.
  * @throws {TypeError} If the option is invalid.
  */
-export async function readFileForMarkdown(filePath, option = 'content') {
+export async function readFileForMarkdown(filePath, option = 'all') {
   const { content, data } = matter(await readFile(filePath));
 
   switch (option) {
@@ -35,6 +35,11 @@ export async function readFileForMarkdown(filePath, option = 'content') {
       return content;
     case 'data':
       return data;
+    case 'all':
+      return {
+        content,
+        data,
+      };
     default:
       throw TypeError();
   }
