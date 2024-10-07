@@ -1,41 +1,20 @@
-import { join } from 'path';
-
 import Link from 'next/link';
 
-import { DOCS, EXTENSION } from '@/constants/path';
-import { readDirTree } from '@/utils/fs/dirTree';
-
-/* Custom Declaration */
-const { md, mdRegExp } = EXTENSION;
-
-function renderDirTree(dirTree, basePath = '') {
-  return (
-    <ul>
-      {dirTree.map(dirTreeNode => {
-        const currPath = join(basePath, dirTreeNode.name);
-
-        return (
-          <li key={currPath}>
-            {dirTreeNode.name.endsWith(md) ? (
-              <Link href={`/posts/${currPath.replace(mdRegExp, '')}`}>
-                {dirTreeNode.name.replace(mdRegExp, '')}
-              </Link>
-            ) : (
-              <>
-                <span>{dirTreeNode.name}</span>
-                {renderDirTree(dirTreeNode.children, currPath)}
-              </>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
+import { DOCS } from '@/constants/path';
+import { readTagTree } from '@/utils/fs/tagTree';
 
 /* React Declaration */
 export default async function Categories() {
-  const dirTree = await readDirTree(DOCS);
+  const tagTree = await readTagTree(DOCS);
 
-  return <>{renderDirTree(dirTree)}</>;
+  return (
+    <ul>
+      {Object.keys(tagTree).map(key => (
+        <li key={key}>
+          <Link href={`/categories/${key}`}>{key}</Link>
+          <span>&nbsp;({tagTree[key].length})</span>
+        </li>
+      ))}
+    </ul>
+  );
 }
