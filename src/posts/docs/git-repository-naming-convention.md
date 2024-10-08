@@ -4,6 +4,9 @@ description: 'Git Repository 이름은 소문자와 대시(`-`)를 사용하여 
 tags:
   - 'convention'
   - 'git'
+date:
+  created: '2024-07-21'
+  updated: '2024-07-21'
 ---
 
 일관성 및 가독성 있는 Repository 관리를 위해, 자주 사용되는 Git Repository 이름 규칙을 알아보자.

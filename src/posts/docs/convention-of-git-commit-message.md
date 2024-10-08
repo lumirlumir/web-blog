@@ -4,6 +4,9 @@ description: 'Commit Message는 명령문 형태로 작성하며, Header, Body, 
 tags:
   - 'convention'
   - 'git'
+date:
+  created: '2024-05-29'
+  updated: '2024-06-11'
 ---
 
 팀원과의 소통, 편리한 과거 기록의 추적을 위해 규칙에 맞는 Commit Message를 작성하는 것이 중요하다.
