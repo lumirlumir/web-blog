@@ -33,7 +33,7 @@ export async function readMarkdownFile(pathToMarkdownFile) {
  * Asynchronously reads a directory and returns a list(array) of `MarkdownDocument` type object.
  *
  * @async
- * @param {string} dirPath Path to a directory.
+ * @param {string} dirPath Path to a directory containing markdown files.
  * @returns {Promise<MarkdownDocument[]>} A promise that resolves to a list(array) of `MarkdownDocument` type object.
  * @see {@link MarkdownDocument}
  */
@@ -49,4 +49,30 @@ export async function readMarkdownFilesFromDir(dirPath) {
   }
 
   return markdownDocuments;
+}
+
+/**
+ * Asynchronously reads a directory and generates a tag tree from markdown files.
+ *
+ * @async
+ * @param {string} dirPath Path to a directory containing markdown files.
+ * @returns {Promise<{[key: string]: MarkdownDocument[]}>} A promise that resolves to a tag tree.
+ * @see {@link MarkdownDocument}
+ */
+export async function readMarkdownTagTree(dirPath) {
+  const tagTree = {}; // Initialize an empty object to store the tag tree.
+  const markdownDocuments = await readMarkdownFilesFromDir(dirPath);
+
+  for (const markdownDocument of markdownDocuments) {
+    const {
+      data: { tags },
+    } = markdownDocument;
+
+    tags.forEach(tag => {
+      tagTree[tag] ??= [];
+      tagTree[tag].push(markdownDocument);
+    });
+  }
+
+  return tagTree;
 }

@@ -10,10 +10,3 @@ export type MarkdownDocument = {
     [key: string]: any;
   };
 };
-
-/**
- * Represents a node in a tag tree.
- */
-export type TagTreeNode = {
-  [key: string]: MarkdownDocument;
-};
