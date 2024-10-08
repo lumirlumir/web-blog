@@ -35,6 +35,22 @@ export function writeTitleIntoMarkdown(title, markdownContent) {
 }
 
 /**
+ * Converts markdown content to plain text.
+ *
+ * @param {string} markdownContent markdown content.
+ * @returns {string} plain text.
+ */
+export function markdownToText(markdownContent) {
+  return (
+    markdownContent
+      // Inline Code Block(`)
+      .replace(/`(.+?)`/g, '$1')
+      // Italic(*), Bold(**), Italic & Bold(***)
+      .replace(/(\*{1,3})(\S)(.*?\S)??\1/g, '$2$3')
+  );
+}
+
+/**
  * Converts markdown content to HTML using GitHub's Markdown API.
  *
  * @async

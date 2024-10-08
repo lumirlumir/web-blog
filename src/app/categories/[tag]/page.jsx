@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { DOCS, EXTENSION } from '@/constants/path';
 import { readTagTree } from '@/utils/fs/tagTree';
-import markdownToText from '@/utils/markdownToText';
+import { markdownToText } from '@/utils/markdownToJsx';
 
 const { mdRegExp } = EXTENSION;
 
