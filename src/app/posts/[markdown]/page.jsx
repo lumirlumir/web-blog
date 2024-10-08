@@ -2,7 +2,7 @@ import { join } from 'path';
 
 import { DOCS, EXTENSION } from '@/constants/path';
 import { readFileForMarkdown, readDirByExtension } from '@/utils/fs';
-import markdownToJsx, { markdownToText } from '@/utils/markdownToJsx';
+import markdownToJsx, { markdownToText } from '@/utils/markup';
 
 /* Custom Declaration */
 const { md, mdRegExp } = EXTENSION;
