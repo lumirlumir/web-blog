@@ -8,17 +8,6 @@ import matter from 'gray-matter';
  */
 
 /**
- * Asynchronously reads the contents of a file.
- *
- * @async
- * @param {string} filePath The path to the file.
- * @returns {Promise<string>} The content of the file.
- */
-export async function readFile(filePath) {
-  return fs.readFile(filePath, 'utf-8');
-}
-
-/**
  * Asynchronously reads a Markdown file and returns either the content or data(front matter).
  *
  * @async
@@ -28,7 +17,7 @@ export async function readFile(filePath) {
  * @throws {TypeError} If the option is invalid.
  */
 export async function readFileForMarkdown(filePath, option = 'all') {
-  const { content, data } = matter(await readFile(filePath));
+  const { content, data } = matter(await fs.readFile(filePath, 'utf-8'));
 
   switch (option) {
     case 'content':
