@@ -1,16 +1,18 @@
-// @ts-check
 import { promises as fs } from 'fs';
-import { basename } from 'path';
+import { basename, join } from 'path';
 
 import matter from 'gray-matter';
 
+import { EXTENSION } from '@/constants/path';
+
+const { md } = EXTENSION;
+
 /**
- * @typedef {import('fs').ObjectEncodingOptions} ObjectEncodingOptions
  * @typedef {import('@/types').MarkdownDocument} MarkdownDocument
  */
 
 /**
- * Asynchronously reads a Markdown file and returns `MarkdownDocument` type object.
+ * Asynchronously reads a Markdown file and returns a `MarkdownDocument` type object.
  *
  * @async
  * @param {string} pathToMarkdownFile Path to a Markdown file.
@@ -28,20 +30,23 @@ export async function readMarkdownFile(pathToMarkdownFile) {
 }
 
 /**
- * Asynchronously reads a directory and returns a list of file paths with the specified extension.
+ * Asynchronously reads a directory and returns a list(array) of `MarkdownDocument` type object.
  *
  * @async
- * @param {string} dirPath The path to the directory.
- * @param {string} extension The file extension to filter by. `extension` cannot be a RegExp. It must be a string.
- * @param {ObjectEncodingOptions & {withFileTypes?: false | undefined; recursive?: boolean | undefined;}} [options = { recursive: true }] Optional `readdir` options.
- * @returns {Promise<string[]>} An array of file paths.
+ * @param {string} dirPath Path to a directory.
+ * @returns {Promise<MarkdownDocument[]>} A promise that resolves to a list(array) of `MarkdownDocument` type object.
+ * @see {@link MarkdownDocument}
  */
-export async function readDirByExtension(
-  dirPath,
-  extension,
-  options = { recursive: true },
-) {
-  const filePaths = await fs.readdir(dirPath, options);
+export async function readMarkdownFilesFromDir(dirPath) {
+  const markdownDocuments = [];
+  const markdownFilePaths = (await fs.readdir(dirPath)).filter(filePath =>
+    filePath.endsWith(md),
+  );
 
-  return filePaths.filter(filePath => filePath.endsWith(extension));
+  for (const markdownFilePath of markdownFilePaths) {
+    const markdownDocument = await readMarkdownFile(join(dirPath, markdownFilePath));
+    markdownDocuments.push(markdownDocument);
+  }
+
+  return markdownDocuments;
 }
