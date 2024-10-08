@@ -4,41 +4,10 @@ import { REPOSITORY } from '@/constants/github';
 import { readFileForMarkdown } from './fs';
 
 /**
- * Converts a markdown content to JSX.
- *
- * @async
- * @param {string} filePath Path to the markdown file.
- * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
- */
-export async function markdownToJsx(filePath) {
-  const { title } = await readFileForMarkdown(filePath, 'data');
-  const markdownContent = writeTitleIntoMarkdown(
-    title,
-    await readFileForMarkdown(filePath, 'content'),
-  );
-
-  const html = await markdownToHtml(markdownContent);
-  const jsx = htmlToJsx(html);
-
-  return jsx;
-}
-
-/**
- * Adds a title as a top-level heading to the given markdown content.
- *
- * @param {string} title The title to add as a heading.
- * @param {string} markdownContent The markdown content.
- * @returns {string} The markdown content with the title as a heading, if provided.
- */
-export function writeTitleIntoMarkdown(title, markdownContent) {
-  return `${title ? `# ${title}\n\n` : ''}${markdownContent}`;
-}
-
-/**
  * Converts markdown content to plain text.
  *
- * @param {string} markdownContent markdown content.
- * @returns {string} plain text.
+ * @param {string} markdownContent Markdown content.
+ * @returns {string} Plain text.
  */
 export function markdownToText(markdownContent) {
   return (
@@ -54,7 +23,7 @@ export function markdownToText(markdownContent) {
  * Converts markdown content to HTML using GitHub's Markdown API.
  *
  * @async
- * @param {string} markdownContent The markdown content.
+ * @param {string} markdownContent Markdown content.
  * @returns {Promise<string>} A promise that resolves to HTML.
  */
 export async function markdownToHtml(markdownContent) {
@@ -76,10 +45,30 @@ export async function markdownToHtml(markdownContent) {
 }
 
 /**
- * Converts HTML to JSX.
+ * Converts markdown content to JSX.
  *
- * @param {string} html The HTML content.
- * @returns {JSX.Element} The JSX representation.
+ * @async
+ * @param {string} filePath Path to the markdown file.
+ * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
+ */
+export async function markdownToJsx(filePath) {
+  const { title } = await readFileForMarkdown(filePath, 'data');
+  const markdownContent = writeTitleIntoMarkdown(
+    title,
+    await readFileForMarkdown(filePath, 'content'),
+  );
+
+  const html = await markdownToHtml(markdownContent);
+  const jsx = htmlToJsx(html);
+
+  return jsx;
+}
+
+/**
+ * Converts HTML to JSX using `html-react-parser`
+ *
+ * @param {string} html HTML
+ * @returns {JSX.Element} JSX
  */
 export function htmlToJsx(html) {
   return parse(html, {
@@ -93,4 +82,15 @@ export function htmlToJsx(html) {
       }
     },
   });
+}
+
+/**
+ * Adds a title as a top-level heading to the given markdown content.
+ *
+ * @param {string} title Title to add as a heading.
+ * @param {string} markdownContent Markdown content.
+ * @returns {string} Markdown content with the title as a heading, if provided.
+ */
+export function writeTitleIntoMarkdown(title, markdownContent) {
+  return `${title ? `# ${title}\n\n` : ''}${markdownContent}`;
 }
