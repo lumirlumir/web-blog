@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 import { DOCS } from '@/constants/path';
-import { readTagTree } from '@/utils/fs/tagTree';
+import { readMarkdownTagTree } from '@/utils/fs';
 
 /* React Declaration */
 export default async function Categories() {
-  const tagTree = await readTagTree(DOCS);
+  const tagTree = await readMarkdownTagTree(DOCS);
 
   return (
     <ul>

@@ -1,9 +1,8 @@
 import { join } from 'path';
 
 import { DOCS, EXTENSION } from '@/constants/path';
-import { readFileForMarkdown, readDirByExtension } from '@/utils/fs';
-import markdownToJsx from '@/utils/markdownToJsx';
-import markdownToText from '@/utils/markdownToText';
+import { readMarkdownFile, readMarkdownFilesFromDir } from '@/utils/fs';
+import { markdownToText, markdownToJsx } from '@/utils/markup';
 
 /* Custom Declaration */
 const { md, mdRegExp } = EXTENSION;
@@ -17,7 +16,8 @@ function getFilePath(params) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const paths = await readDirByExtension(DOCS, md);
+  const markdownDocuments = await readMarkdownFilesFromDir(DOCS);
+  const paths = markdownDocuments.map(markdownDocument => markdownDocument.basename);
 
   return paths.map(path => ({
     markdown: path.replace(mdRegExp, ''),
@@ -25,7 +25,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await readFileForMarkdown(getFilePath(params), 'data');
+  const {
+    data: { title, description },
+  } = await readMarkdownFile(getFilePath(params));
 
   return {
     title: markdownToText(title),
