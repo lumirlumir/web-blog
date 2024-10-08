@@ -1,37 +1,30 @@
 // @ts-check
 import { promises as fs } from 'fs';
+import { basename } from 'path';
 
 import matter from 'gray-matter';
 
 /**
  * @typedef {import('fs').ObjectEncodingOptions} ObjectEncodingOptions
+ * @typedef {import('@/types').MarkdownDocument} MarkdownDocument
  */
 
 /**
- * Asynchronously reads a Markdown file and returns either the content or data(front matter).
+ * Asynchronously reads a Markdown file and returns `MarkdownDocument` type object.
  *
  * @async
- * @param {string} filePath The path to the Markdown file.
- * @param {'content' | 'data' | 'all'} [option='all'] The type of data to return.
- * @returns {Promise<string | {[key: string]: any} | {content: string, data: {[key: string]: any}}>} The content or data(front matter) of the file.
- * @throws {TypeError} If the option is invalid.
+ * @param {string} pathToMarkdownFile Path to a Markdown file.
+ * @returns {Promise<MarkdownDocument>} A promise that resolves to a `MarkdownDocument` type object.
+ * @see {@link MarkdownDocument}
  */
-export async function readFileForMarkdown(filePath, option = 'all') {
-  const { content, data } = matter(await fs.readFile(filePath, 'utf-8'));
+export async function readMarkdownFile(pathToMarkdownFile) {
+  const { content, data } = matter(await fs.readFile(pathToMarkdownFile, 'utf-8'));
 
-  switch (option) {
-    case 'content':
-      return content;
-    case 'data':
-      return data;
-    case 'all':
-      return {
-        content,
-        data,
-      };
-    default:
-      throw TypeError();
-  }
+  return {
+    basename: basename(pathToMarkdownFile),
+    content,
+    data,
+  };
 }
 
 /**

@@ -1,7 +1,7 @@
 import { join } from 'path';
 
 import { EXTENSION } from '@/constants/path';
-import { readFileForMarkdown, readDirByExtension } from '@/utils/fs';
+import { readMarkdownFile, readDirByExtension } from '@/utils/fs';
 
 const { md } = EXTENSION;
 
@@ -20,7 +20,7 @@ export async function readTagTree(dirPath) {
   const markdownFilePaths = await readDirByExtension(dirPath, md);
 
   for (const markdownFilePath of markdownFilePaths) {
-    const { content, data } = await readFileForMarkdown(join(dirPath, markdownFilePath));
+    const { content, data } = await readMarkdownFile(join(dirPath, markdownFilePath));
 
     data.tags.forEach(tag => {
       tagTree[tag] ??= [];

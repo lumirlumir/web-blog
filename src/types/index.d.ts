@@ -1,8 +1,11 @@
 /**
- * Represents a Markdown file structure with its content and data(front matter).
+ * Represents a Markdown file structure with its basename, content and data(front matter).
  */
-export type Markdown = {
+export type MarkdownDocument = {
+  basename: string;
+  // The property obtained from the front matter
   content: string;
+  // The property obtained from the front matter
   data: {
     [key: string]: any;
   };
@@ -12,7 +15,5 @@ export type Markdown = {
  * Represents a node in a tag tree.
  */
 export type TagTreeNode = {
-  [key: string]: {
-    basename: string;
-  } & Markdown;
+  [key: string]: MarkdownDocument;
 };

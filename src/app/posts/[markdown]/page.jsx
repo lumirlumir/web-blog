@@ -1,7 +1,7 @@
 import { join } from 'path';
 
 import { DOCS, EXTENSION } from '@/constants/path';
-import { readFileForMarkdown, readDirByExtension } from '@/utils/fs';
+import { readMarkdownFile, readDirByExtension } from '@/utils/fs';
 import { markdownToText, markdownToJsx } from '@/utils/markup';
 
 /* Custom Declaration */
@@ -24,7 +24,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { title, description } = await readFileForMarkdown(getFilePath(params), 'data');
+  const {
+    data: { title, description },
+  } = await readMarkdownFile(getFilePath(params));
 
   return {
     title: markdownToText(title),
