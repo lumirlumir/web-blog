@@ -10,7 +10,7 @@ import { readFileForMarkdown } from './fs';
  * @param {string} filePath Path to the markdown file.
  * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
  */
-export default async function markdownToJsx(filePath) {
+export async function markdownToJsx(filePath) {
   const { title } = await readFileForMarkdown(filePath, 'data');
   const markdownContent = writeTitleIntoMarkdown(
     title,
