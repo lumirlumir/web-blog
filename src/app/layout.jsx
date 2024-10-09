@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import Article from '@/components/layouts/Article';
 import Aside from '@/components/layouts/Aside';
 import Body from '@/components/layouts/Body';
 import Header from '@/components/layouts/Header';
@@ -35,9 +34,7 @@ export default function RootLayout({ children }) {
           <Home />
           <Categories />
         </Aside>
-        <Main>
-          <Article>{children}</Article>
-        </Main>
+        <Main>{children}</Main>
 
         <Analytics />
         <SpeedInsights />
