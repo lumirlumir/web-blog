@@ -1,0 +1,12 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 225px;
+
+  > article {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  > nav {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
