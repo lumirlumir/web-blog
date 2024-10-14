@@ -27,7 +27,10 @@ export type MarkdownDocumentData = {
  * Metadata for `MarkdownDocument`'s `data`(front matter).
  */
 export type MarkdownDocumentDataMeta = {
-  name: string;
+  name: {
+    en: string;
+    ko: string;
+  };
   reactIcons: JSX.Element;
 };
 
