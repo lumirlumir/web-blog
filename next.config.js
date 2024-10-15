@@ -7,4 +7,10 @@ module.exports = {
       @import 'mixins';
     `,
   },
+  // Remove `console.*` output except `console.error`
+  compiler: {
+    removeConsole: {
+      exclude: ['error'],
+    },
+  },
 };
