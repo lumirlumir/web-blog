@@ -28,9 +28,10 @@ import {
 
 /**
  * The keys should be declared in {@link MarkdownDocumentData}.
+ *
+ * @type {{[key: string]: MarkdownDocumentDataMeta}}
  */
 export const DATA = Object.freeze({
-  /** @type {MarkdownDocumentDataMeta} */
   title: {
     name: {
       en: 'Title',
@@ -38,8 +39,6 @@ export const DATA = Object.freeze({
     },
     reactIcons: <LuHeading1 />,
   },
-
-  /** @type {MarkdownDocumentDataMeta} */
   description: {
     name: {
       en: 'Description',
@@ -47,34 +46,26 @@ export const DATA = Object.freeze({
     },
     reactIcons: <FaBook />,
   },
-
-  /** @type {MarkdownDocumentDataMeta} */
+  created: {
+    name: {
+      en: 'Created Date',
+      ko: '생성한 날짜',
+    },
+    reactIcons: <FaRegCalendarPlus />,
+  },
+  updated: {
+    name: {
+      en: 'Updated Date',
+      ko: '수정한 날짜',
+    },
+    reactIcons: <FaRegCalendarXmark />,
+  },
   tags: {
     name: {
       en: 'Tags',
       ko: '태그',
     },
     reactIcons: <FaTag />,
-  },
-
-  date: {
-    /** @type {MarkdownDocumentDataMeta} */
-    created: {
-      name: {
-        en: 'Created Date',
-        ko: '생성한 날짜',
-      },
-      reactIcons: <FaRegCalendarPlus />,
-    },
-
-    /** @type {MarkdownDocumentDataMeta} */
-    updated: {
-      name: {
-        en: 'Updated Date',
-        ko: '수정한 날짜',
-      },
-      reactIcons: <FaRegCalendarXmark />,
-    },
   },
 });
 

@@ -1,11 +1,10 @@
 ---
 title: '식별자(변수) 이름 명명 규칙: Camel, Pascal, Snake, Kebab'
 description: '프로그래밍에서 식별자 이름 규칙으로 camelCase, PascalCase, snake_case, kebab-case등이 있으며, 각각 코드 가독성과 일관성을 위해 사용된다.'
+created: '2024-07-18'
+updated: '2024-07-18'
 tags:
   - 'convention'
-date:
-  created: '2024-07-18'
-  updated: '2024-07-18'
 ---
 
 개발을 하다보면, 프로그래밍 언어마다 식별자 이름 규칙이 서로 다르다는 것을 알 수 있다. 변수, 함수, 클래스 등의 식별자 이름을 지을 때 사용하는 이름 명명 규칙(Naming Convention)을 알아보자.

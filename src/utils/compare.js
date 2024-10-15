@@ -7,7 +7,7 @@ import { markdownToText } from './markup';
 /**
  * Use with an array of {@link MarkdownDocument} type.
  *
- * @param {'title' | 'date-created' | 'date-updated'} sort `'title'`, `'date-created'` or `'date-updated'` can be used.
+ * @param {'title' | 'created' | 'updated'} sort `'title'`, `'created'` or `'updated'` can be used.
  * @param {'asc' | 'desc'} order `'asc'` or `'desc'` can be used.
  * @returns {function} A comparison function for use with `Array.prototype.sort`.
  */
@@ -23,15 +23,11 @@ export function compareMarkdownDocument(sort, order) {
           : titleB.localeCompare(titleA, 'ko'); // Descending.
       };
     }
-    case 'date-created':
-    case 'date-updated': {
+    case 'created':
+    case 'updated': {
       return function (a, b) {
-        const dateA = new Date(
-          a.data.date[sort === 'date-created' ? 'created' : 'updated'],
-        );
-        const dateB = new Date(
-          b.data.date[sort === 'date-created' ? 'created' : 'updated'],
-        );
+        const dateA = new Date(a.data[sort]);
+        const dateB = new Date(b.data[sort]);
 
         // NaN check for invalid dates
         if (isNaN(dateA) || isNaN(dateB)) {
@@ -44,9 +40,7 @@ export function compareMarkdownDocument(sort, order) {
       };
     }
     default: {
-      throw new TypeError(
-        'Invalid sort. Use "title", "date-created", or "date-updated".',
-      );
+      throw new TypeError('Invalid sort. Use "title", "created", or "updated".');
     }
   }
 }
