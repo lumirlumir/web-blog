@@ -4,7 +4,7 @@ import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 import { FaArrowDownWideShort, FaArrowUpShortWide } from 'react-icons/fa6';
 import { GrSort } from 'react-icons/gr';
 
-import { DATA } from '@/data/markdownDocument';
+import { MARKDOWN_DOCUMENT_DATA_META } from '@/data';
 
 export default function SortContainer() {
   const pathname = usePathname();
@@ -28,10 +28,10 @@ export default function SortContainer() {
       {/* TODO: Make a reusable component named `SortItem.jsx` */}
       <div>
         <div>
-          {DATA.title.reactIcons}
+          {MARKDOWN_DOCUMENT_DATA_META.title.reactIcons}
           <sup>
-            {DATA.title.name.en}
-            {DATA.title.name.ko}
+            {MARKDOWN_DOCUMENT_DATA_META.title.name.en}
+            {MARKDOWN_DOCUMENT_DATA_META.title.name.ko}
           </sup>
         </div>
         <div>
@@ -45,10 +45,10 @@ export default function SortContainer() {
       </div>
       <div>
         <div>
-          {DATA.created.reactIcons}
+          {MARKDOWN_DOCUMENT_DATA_META.created.reactIcons}
           <sup>
-            {DATA.created.name.en}
-            {DATA.created.name.ko}
+            {MARKDOWN_DOCUMENT_DATA_META.created.name.en}
+            {MARKDOWN_DOCUMENT_DATA_META.created.name.ko}
           </sup>
         </div>
         <div>
@@ -62,10 +62,10 @@ export default function SortContainer() {
       </div>
       <div>
         <div>
-          {DATA.updated.reactIcons}
+          {MARKDOWN_DOCUMENT_DATA_META.updated.reactIcons}
           <sup>
-            {DATA.updated.name.en}
-            {DATA.updated.name.ko}
+            {MARKDOWN_DOCUMENT_DATA_META.updated.name.en}
+            {MARKDOWN_DOCUMENT_DATA_META.updated.name.ko}
           </sup>
         </div>
         <div>
