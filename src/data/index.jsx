@@ -31,7 +31,7 @@ import {
  *
  * @type {{[key: string]: MarkdownDocumentDataMeta}}
  */
-export const DATA = Object.freeze({
+export const MARKDOWN_DOCUMENT_DATA_META = Object.freeze({
   title: {
     name: {
       en: 'Title',
@@ -74,7 +74,7 @@ export const DATA = Object.freeze({
  *
  * @type {{[key: string]: MarkdownDocumentDataTagMeta}}
  */
-export const DATA_TAG = Object.freeze({
+export const MARKDOWN_DOCUMENT_DATA_TAG_META = Object.freeze({
   html: {
     name: {
       en: 'HTML',
