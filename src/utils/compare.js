@@ -1,3 +1,5 @@
+import { markdownToText } from './markup';
+
 /**
  * @typedef {import('@/types').MarkdownDocument} MarkdownDocument
  */
@@ -13,12 +15,12 @@ export function compareMarkdownDocument(sort, order) {
   switch (sort) {
     case 'title': {
       return function (a, b) {
-        const titleA = a.data.title.toLowerCase(); // Case insensitive.
-        const titleB = b.data.title.toLowerCase(); // Case insensitive.
+        const titleA = markdownToText(a.data.title.toLowerCase()); // Case insensitive.
+        const titleB = markdownToText(b.data.title.toLowerCase()); // Case insensitive.
 
         return order === 'asc'
-          ? titleA.localeCompare(titleB) // Ascending.
-          : titleB.localeCompare(titleA); // Descending.
+          ? titleA.localeCompare(titleB, 'ko') // Ascending.
+          : titleB.localeCompare(titleA, 'ko'); // Descending.
       };
     }
     case 'date-created':
