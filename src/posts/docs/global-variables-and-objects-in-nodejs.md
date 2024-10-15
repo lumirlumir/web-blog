@@ -1,11 +1,10 @@
 ---
 title: 'Node.js의 전역 변수와 전역 객체'
 description: 'Node.js는 브라우저의 `window` 객체 대신, 전역 변수(`__filename`, `__dirname`)와 전역 객체(`global`, `process`, `exports`)를 제공하여 시스템 정보, 프로세스 제어, 모듈화를 지원한다.'
+created: '2024-04-02'
+updated: '2024-04-02'
 tags:
   - 'nodejs'
-date:
-  created: '2024-04-02'
-  updated: '2024-04-02'
 ---
 
 웹 브라우저에서 동작하는 JavaScript의 최상위 객체는 `window` 객체이다. 하지만, Node.js는 브라우저에서 동작하는 것이 아니므로 `window` 객체가 없는 대신, 전역 변수와 전역 함수를 가지고 있다.

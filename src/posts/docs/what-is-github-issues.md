@@ -1,11 +1,10 @@
 ---
 title: '***Github Issues***란 무엇인가?'
 description: 'GitHub의 **Issues**는 버그 수정, 일정, 아이디어 등을 관리할 수 있는 도구로, **Projects**와 통합되어 시각화 및 자동화 기능을 제공하며, **Commit**과 연동하여 이슈를 추적할 수 있도록 돕는다.'
+created: '2024-03-21'
+updated: '2024-07-21'
 tags:
   - 'git'
-date:
-  created: '2024-03-21'
-  updated: '2024-07-21'
 ---
 
 ***Issues***란, ***Issues Tracking***을 할 수 있도록 ***Github***에서 제공하는 도구이다. 자체 기능인 ***Issues***, ***Projects***, ***Insights*** 등의 다양한 시각화 도구들을 함께 제공한다.
