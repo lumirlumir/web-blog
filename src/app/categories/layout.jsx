@@ -1,12 +1,14 @@
 import Article from '@/components/layouts/Article';
 import Nav from '@/components/layouts/Nav';
-// import Sort from '@/components/nav/Sort';
+import SortContainer from '@/components/nav/SortContainer';
 
 export default function Layout({ children }) {
   return (
     <>
       <Article>{children}</Article>
-      <Nav>{/* <Sort /> */}</Nav>
+      <Nav>
+        <SortContainer />
+      </Nav>
     </>
   );
 }
