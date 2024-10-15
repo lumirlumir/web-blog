@@ -11,22 +11,15 @@ import { markdownToText } from '@/utils/markup';
 const { mdRegExp } = EXTENSION;
 
 export default async function Page({ params, searchParams }) {
-  const { sort = 'date-updated', order = 'desc' } = searchParams;
+  const { sort = 'updated', order = 'desc' } = searchParams;
 
   const tagTree = await readMarkdownTagTree(DOCS);
 
   return (
     <Suspense key={sort + order} fallback={<span>loading...</span>}>
-      {tagTree[params.tag].sort(compareMarkdownDocument(sort, order)).map(
-        ({
-          basename,
-          data: {
-            title,
-            description,
-            tags,
-            date: { created, updated },
-          },
-        }) => (
+      {tagTree[params.tag]
+        .sort(compareMarkdownDocument(sort, order))
+        .map(({ basename, data: { title, description, created, updated, tags } }) => (
           <div key={basename}>
             <h2>
               <Link href={`/posts/${basename.replace(mdRegExp, '')}`}>
@@ -61,8 +54,7 @@ export default async function Page({ params, searchParams }) {
             </p>
             <hr />
           </div>
-        ),
-      )}
+        ))}
     </Suspense>
   );
 }

@@ -16,11 +16,9 @@ export type MarkdownDocument = {
 export type MarkdownDocumentData = {
   title: string;
   description: string;
+  created: string;
+  updated: string;
   tags: MarkdownDocumentDataTag[];
-  date: {
-    created: string;
-    updated: string;
-  };
 };
 
 /**

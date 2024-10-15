@@ -45,34 +45,34 @@ export default function SortContainer() {
       </div>
       <div>
         <div>
-          {DATA.date.created.reactIcons}
+          {DATA.created.reactIcons}
           <sup>
-            {DATA.date.created.name.en}
-            {DATA.date.created.name.ko}
+            {DATA.created.name.en}
+            {DATA.created.name.ko}
           </sup>
         </div>
         <div>
-          <button onClick={() => onClick('date-created', 'desc')}>
+          <button onClick={() => onClick('created', 'desc')}>
             <FaArrowDownWideShort size="16px" title="내림차순" />
           </button>
-          <button onClick={() => onClick('date-created', 'asc')}>
+          <button onClick={() => onClick('created', 'asc')}>
             <FaArrowUpShortWide size="16px" title="오름차순" />
           </button>
         </div>
       </div>
       <div>
         <div>
-          {DATA.date.updated.reactIcons}
+          {DATA.updated.reactIcons}
           <sup>
-            {DATA.date.updated.name.en}
-            {DATA.date.updated.name.ko}
+            {DATA.updated.name.en}
+            {DATA.updated.name.ko}
           </sup>
         </div>
         <div>
-          <button onClick={() => onClick('date-updated', 'desc')}>
+          <button onClick={() => onClick('updated', 'desc')}>
             <FaArrowDownWideShort size="16px" title="내림차순" />
           </button>
-          <button onClick={() => onClick('date-updated', 'asc')}>
+          <button onClick={() => onClick('updated', 'asc')}>
             <FaArrowUpShortWide size="16px" title="오름차순" />
           </button>
         </div>
