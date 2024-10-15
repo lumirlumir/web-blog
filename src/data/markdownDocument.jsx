@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { LuHeading1 } from 'react-icons/lu';
 import { RiJavascriptFill } from 'react-icons/ri';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { SiVisualstudiocode } from 'react-icons/si';
@@ -36,7 +36,7 @@ export const DATA = Object.freeze({
       en: 'Title',
       ko: '제목',
     },
-    reactIcons: <Fragment />,
+    reactIcons: <LuHeading1 />,
   },
 
   /** @type {MarkdownDocumentDataMeta} */
