@@ -6,7 +6,7 @@ import { FaBook, FaTag, FaRegCalendarPlus, FaRegCalendarXmark } from 'react-icon
 import { PATH_DOCS, EXT_MD_REGEXP } from '@/constants';
 import { compareMarkdownDocument } from '@/utils/compare';
 import { readMarkdownTagTree } from '@/utils/fs';
-import { markdownToText } from '@/utils/markup';
+import { markdownToJsx } from '@/utils/markup';
 
 export default async function Page({ params, searchParams }) {
   const { sort = 'updated', order = 'desc' } = searchParams;
@@ -21,12 +21,12 @@ export default async function Page({ params, searchParams }) {
           <div key={basename}>
             <h2>
               <Link href={`/posts/${basename.replace(EXT_MD_REGEXP, '')}`}>
-                {markdownToText(title)}
+                {markdownToJsx(title)}
               </Link>
             </h2>
             <p>
               <FaBook />
-              {markdownToText(description)}
+              {markdownToJsx(description)}
             </p>
             <p>
               {tags.map(tag => (
