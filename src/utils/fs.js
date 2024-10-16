@@ -3,9 +3,7 @@ import { basename, join } from 'path';
 
 import matter from 'gray-matter';
 
-import { EXTENSION } from '@/constants/path';
-
-const { md } = EXTENSION;
+import { EXT_MD } from '@/constants';
 
 /**
  * @typedef {import('@/types').MarkdownDocument} MarkdownDocument
@@ -40,7 +38,7 @@ export async function readMarkdownFile(pathToMarkdownFile) {
 export async function readMarkdownFilesFromDir(dirPath) {
   const markdownDocuments = [];
   const markdownFilePaths = (await fs.readdir(dirPath)).filter(filePath =>
-    filePath.endsWith(md),
+    filePath.endsWith(EXT_MD),
   );
 
   for (const markdownFilePath of markdownFilePaths) {
