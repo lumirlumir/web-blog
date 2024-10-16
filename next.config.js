@@ -5,6 +5,7 @@ module.exports = {
     includePaths: [path.resolve(__dirname, 'src', 'styles')],
     additionalData: `
       @import 'mixins';
+      @import 'theme';
     `,
   },
   // Remove `console.*` output except `console.error`
