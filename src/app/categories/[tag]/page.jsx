@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Fragment, Suspense } from 'react';
 import { FaBook, FaTag, FaRegCalendarPlus, FaRegCalendarXmark } from 'react-icons/fa6';
 
+import Loading from '@/components/common/Loading';
+
 import { PATH_DOCS, EXT_MD_REGEXP } from '@/constants';
 import { compareMarkdownDocument } from '@/utils/compare';
 import { readMarkdownTagTree } from '@/utils/fs';
@@ -24,7 +26,7 @@ export default async function Page({ params, searchParams }) {
   const tagTree = await readMarkdownTagTree(PATH_DOCS);
 
   return (
-    <Suspense key={sort + order} fallback={<span>loading...</span>}>
+    <Suspense key={sort + order} fallback={<Loading />}>
       {tagTree[params.tag]
         .sort(compareMarkdownDocument(sort, order))
         .map(({ basename, data: { title, description, created, updated, tags } }) => (
