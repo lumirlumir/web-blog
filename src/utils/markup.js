@@ -31,7 +31,7 @@ export async function markdownToHtml(markdownContent) {
     method: 'POST',
     headers: {
       Accept: 'application/vnd.github+json',
-      Authorization: process.env.GH_PAT,
+      Authorization: `Bearer ${process.env.GH_PAT}`,
       'Content-Type': 'application/json',
       'X-GitHub-Api-Version': '2022-11-28',
     },
