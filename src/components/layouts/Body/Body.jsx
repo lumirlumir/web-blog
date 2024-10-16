@@ -1,5 +1,3 @@
-import 'github-markdown-css/github-markdown.css';
-
 import styles from './Body.module.scss';
 
 export default function Body({ children }) {

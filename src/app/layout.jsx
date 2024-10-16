@@ -13,7 +13,7 @@ import Title from '@/components/header/Title';
 
 import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
 
-// TODO: import '@/styles/global.scss';
+import '@/styles/global.scss';
 
 export const metadata = {
   title: {
