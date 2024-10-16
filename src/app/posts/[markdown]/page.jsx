@@ -1,14 +1,12 @@
 import { join } from 'path';
 
-import { DOCS, EXTENSION } from '@/constants/path';
+import { PATH_DOCS, EXT_MD, EXT_MD_REGEXP } from '@/constants';
 import { readMarkdownFile, readMarkdownFilesFromDir } from '@/utils/fs';
 import { markdownToText, markdownToJsx } from '@/utils/markup';
 
 /* Custom Declaration */
-const { md, mdRegExp } = EXTENSION;
-
 function getFilePath(params) {
-  return join(DOCS, `${params.markdown}${md}`);
+  return join(PATH_DOCS, `${params.markdown}${EXT_MD}`);
 }
 
 /* Next.js Declaration */
@@ -16,11 +14,11 @@ function getFilePath(params) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const markdownDocuments = await readMarkdownFilesFromDir(DOCS);
+  const markdownDocuments = await readMarkdownFilesFromDir(PATH_DOCS);
   const paths = markdownDocuments.map(markdownDocument => markdownDocument.basename);
 
   return paths.map(path => ({
-    markdown: path.replace(mdRegExp, ''),
+    markdown: path.replace(EXT_MD_REGEXP, ''),
   }));
 }
 
