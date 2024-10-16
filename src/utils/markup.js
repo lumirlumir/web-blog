@@ -31,6 +31,7 @@ export async function markdownToHtml(markdownContent) {
     method: 'POST',
     headers: {
       Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${process.env.GH_PAT}`,
       'Content-Type': 'application/json',
       'X-GitHub-Api-Version': '2022-11-28',
     },
@@ -48,19 +49,31 @@ export async function markdownToHtml(markdownContent) {
  * Converts markdown content to JSX.
  *
  * @async
+ * @param {string} markdownContent Markdown content.
+ * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
+ */
+export async function markdownToJsx(markdownContent) {
+  const html = await markdownToHtml(markdownContent);
+  const jsx = htmlToJsx(html);
+
+  return jsx;
+}
+
+/**
+ * Converts markdown content to JSX from path.
+ *
+ * @async
  * @param {string} pathToMarkdownFile Path to a markdown file.
  * @returns {Promise<JSX.Element>} A promise that resolves to JSX.
  */
-export async function markdownToJsx(pathToMarkdownFile) {
+export async function markdownToJsxFromPath(pathToMarkdownFile) {
   const {
     content,
     data: { title },
   } = await readMarkdownFile(pathToMarkdownFile);
 
   const markdownContent = writeTitleIntoMarkdown(title, content);
-
-  const html = await markdownToHtml(markdownContent);
-  const jsx = htmlToJsx(html);
+  const jsx = await markdownToJsx(markdownContent);
 
   return jsx;
 }

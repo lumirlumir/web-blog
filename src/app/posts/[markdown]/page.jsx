@@ -2,7 +2,7 @@ import { join } from 'path';
 
 import { PATH_DOCS, EXT_MD, EXT_MD_REGEXP } from '@/constants';
 import { readMarkdownFile, readMarkdownFilesFromDir } from '@/utils/fs';
-import { markdownToText, markdownToJsx } from '@/utils/markup';
+import { markdownToText, markdownToJsxFromPath } from '@/utils/markup';
 
 /* Custom Declaration */
 function getFilePath(params) {
@@ -34,5 +34,5 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  return <>{await markdownToJsx(getFilePath(params))}</>;
+  return <>{await markdownToJsxFromPath(getFilePath(params))}</>;
 }

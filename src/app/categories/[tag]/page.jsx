@@ -3,30 +3,42 @@ import Link from 'next/link';
 import { Fragment, Suspense } from 'react';
 import { FaBook, FaTag, FaRegCalendarPlus, FaRegCalendarXmark } from 'react-icons/fa6';
 
+import Loading from '@/components/common/Loading';
+
 import { PATH_DOCS, EXT_MD_REGEXP } from '@/constants';
 import { compareMarkdownDocument } from '@/utils/compare';
 import { readMarkdownTagTree } from '@/utils/fs';
-import { markdownToText } from '@/utils/markup';
+import { markdownToJsx } from '@/utils/markup';
+
+/* Next.js Declaration */
+// Control what happens when a dynamic segment is visited that was not generated with `generateStaticParams`.
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const tagTree = await readMarkdownTagTree(PATH_DOCS);
+  const tags = Object.keys(tagTree);
+
+  return tags.map(tag => ({ tag }));
+}
 
 export default async function Page({ params, searchParams }) {
   const { sort = 'updated', order = 'desc' } = searchParams;
-
   const tagTree = await readMarkdownTagTree(PATH_DOCS);
 
   return (
-    <Suspense key={sort + order} fallback={<span>loading...</span>}>
+    <Suspense key={sort + order} fallback={<Loading />}>
       {tagTree[params.tag]
         .sort(compareMarkdownDocument(sort, order))
         .map(({ basename, data: { title, description, created, updated, tags } }) => (
           <div key={basename}>
             <h2>
               <Link href={`/posts/${basename.replace(EXT_MD_REGEXP, '')}`}>
-                {markdownToText(title)}
+                {markdownToJsx(title)}
               </Link>
             </h2>
             <p>
               <FaBook />
-              {markdownToText(description)}
+              {markdownToJsx(description)}
             </p>
             <p>
               {tags.map(tag => (
