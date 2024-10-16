@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 
-import { REPOSITORY } from '@/constants/github';
+import { GITHUB_REPO_FULL_NAME } from '@/constants';
 import { readMarkdownFile } from './fs';
 
 /**
@@ -37,7 +37,7 @@ export async function markdownToHtml(markdownContent) {
     body: JSON.stringify({
       text: markdownContent,
       mode: 'gfm',
-      context: REPOSITORY.fullName,
+      context: GITHUB_REPO_FULL_NAME,
     }),
   });
 

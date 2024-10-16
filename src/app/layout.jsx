@@ -11,16 +11,16 @@ import Home from '@/components/aside/Home';
 
 import Title from '@/components/header/Title';
 
-import { USER } from '@/constants/github';
+import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
 
 // TODO: import '@/styles/global.scss';
 
 export const metadata = {
   title: {
-    template: `%s | ${USER.name}`,
-    default: USER.name,
+    template: `%s | ${GITHUB_USER_NAME}`,
+    default: GITHUB_USER_NAME,
   },
-  description: USER.bio,
+  description: GITHUB_USER_BIO,
 };
 
 export default function RootLayout({ children }) {

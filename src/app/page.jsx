@@ -1,6 +1,6 @@
 import Article from '@/components/layouts/Article';
-import { USER } from '@/constants/github';
+import { GITHUB_USER_NAME } from '@/constants';
 
 export default function Page() {
-  return <Article>{`Hello, It's ${USER.name}'s blog!`}</Article>;
+  return <Article>{`Hello, It's ${GITHUB_USER_NAME}'s blog!`}</Article>;
 }

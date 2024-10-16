@@ -2,12 +2,12 @@
 
 import GiscusOriginal from '@giscus/react';
 
-import { REPOSITORY } from '@/constants/github';
+import { GITHUB_REPO_FULL_NAME } from '@/constants';
 
 export default function Giscus() {
   return (
     <GiscusOriginal
-      repo={REPOSITORY.fullName}
+      repo={GITHUB_REPO_FULL_NAME}
       repoId="R_kgDOLa_QgA"
       category="comments"
       categoryId="DIC_kwDOLa_QgM4ChivI"
