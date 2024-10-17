@@ -1,5 +1,25 @@
+/* props */
 @mixin props-flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* selector */
+@mixin selector-hover-default {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-bg-neutral-muted);
+    border-radius: $size-border-radius;
+  }
+}
+
+@mixin selector-scrollbar {
+  overflow: hidden auto;
+
+  &::-webkit-scrollbar {
+    // Global usage: `*::webkit-scrollbar`.
+    display: none;
+  }
 }
