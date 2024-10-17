@@ -7,7 +7,7 @@ import Header from '@/components/layouts/Header';
 import Main from '@/components/layouts/Main';
 
 import Categories from '@/components/aside/Categories';
-import Home from '@/components/aside/Home';
+import Links from '@/components/aside/Links';
 import Profile from '@/components/aside/Profile/Profile';
 
 import Title from '@/components/header/Title';
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         </Header>
         <Aside>
           <Profile />
-          <Home />
+          <Links />
           <Categories />
         </Aside>
         <Main>{children}</Main>
