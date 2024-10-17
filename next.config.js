@@ -4,8 +4,7 @@ module.exports = {
   sassOptions: {
     includePaths: [path.resolve(__dirname, 'src', 'styles')],
     additionalData: `
-      @import 'mixins';
-      @import 'theme';
+      @import 'utils/mixins';
     `,
   },
   // Remove `console.*` output except `console.error`
