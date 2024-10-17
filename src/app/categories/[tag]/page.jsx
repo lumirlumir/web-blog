@@ -26,7 +26,7 @@ export default async function Page({ params, searchParams }) {
   const tagTree = await readMarkdownTagTree(PATH_DOCS);
 
   return (
-    <Suspense key={sort + order} fallback={<Loading />}>
+    <Suspense key={sort + order} fallback={<Loading content="목록" />}>
       {tagTree[params.tag]
         .sort(compareMarkdownDocument(sort, order))
         .map(({ basename, data: { title, description, created, updated, tags } }) => (

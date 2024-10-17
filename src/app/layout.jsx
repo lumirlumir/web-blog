@@ -7,13 +7,14 @@ import Header from '@/components/layouts/Header';
 import Main from '@/components/layouts/Main';
 
 import Categories from '@/components/aside/Categories';
-import Home from '@/components/aside/Home';
+import Links from '@/components/aside/Links';
+import Profile from '@/components/aside/Profile/Profile';
 
 import Title from '@/components/header/Title';
 
 import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
 
-// TODO: import '@/styles/global.scss';
+import '@/styles/global.scss';
 
 export const metadata = {
   title: {
@@ -31,7 +32,8 @@ export default function RootLayout({ children }) {
           <Title />
         </Header>
         <Aside>
-          <Home />
+          <Profile />
+          <Links />
           <Categories />
         </Aside>
         <Main>{children}</Main>

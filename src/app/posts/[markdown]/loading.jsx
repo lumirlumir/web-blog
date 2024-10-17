@@ -1,5 +1,5 @@
-import LoadingGif from '@/components/common/Loading';
+import LoadingOriginal from '@/components/common/Loading';
 
 export default function Loading() {
-  return <LoadingGif />;
+  return <LoadingOriginal content="문서" />;
 }
