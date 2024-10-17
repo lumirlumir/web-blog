@@ -15,7 +15,17 @@ $text-weight-medium: 500;
 $text-weight-semibold: 600;
 
 /* font */
-$font:
+$font-stack-system: // For general usage
+  -apple-system,
+  blinkmacsystemfont,
+  segoe ui,
+  noto sans,
+  helvetica,
+  arial,
+  sans-serif,
+  apple color emoji,
+  segoe ui emoji;
+$font-stack-monospace: // For markdown content
   ui-monospace,
   sfmono-regular,
   sf mono,
