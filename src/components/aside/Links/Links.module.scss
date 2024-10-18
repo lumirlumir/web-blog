@@ -8,6 +8,12 @@
     @include props-flex-center;
     @include selector-hover-default;
 
+    &:hover {
+      > svg {
+        @include props-animation-shake;
+      }
+    }
+
     flex-direction: column;
     padding: 6px;
 
