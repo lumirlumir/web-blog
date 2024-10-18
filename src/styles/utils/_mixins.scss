@@ -23,3 +23,17 @@
     display: none;
   }
 }
+
+@mixin selector-scrollbar-default {
+  overflow: hidden auto;
+
+  // chrome edge safari
+  &::-webkit-scrollbar {
+    width: 4px;
+
+    &-thumb {
+      background-color: var(--color-border-default);
+      border-radius: $size-border-radius;
+    }
+  }
+}
