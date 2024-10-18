@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { GITHUB_USER_LOGIN } from '@/constants';
+import { getGithubUsers } from '@/utils/fetch';
 
 import styles from './Profile.module.scss';
 
 export default async function Profile() {
-  const response = await fetch(`https://api.github.com/users/${GITHUB_USER_LOGIN}`);
-  const { avatar_url, bio, name } = await response.json();
+  const { avatar_url, bio, name } = await getGithubUsers();
 
   return (
     <div className={styles.profile}>
