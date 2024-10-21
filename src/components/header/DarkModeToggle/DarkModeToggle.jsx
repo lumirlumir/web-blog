@@ -6,12 +6,12 @@ import { ThemeContext } from '@/components/common/ThemeProvider';
 import styles from './DarkModeToggle.module.scss';
 
 export default function DarkModeToggle() {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className={styles['dark-mode-toggle']}>
       <button
-        className={`${styles['mode-switcher']} ${isDarkMode ? '' : styles.active}`}
+        className={`${styles['mode-switcher']} ${theme ? '' : styles.active}`}
         onClick={toggleTheme}
       >
         <span className={styles['mode-switcher-main-body']}></span>

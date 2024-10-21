@@ -5,14 +5,16 @@ import React, { createContext, useState } from 'react';
 export const ThemeContext = createContext();
 
 export default function ThemeProvider({ children }) {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [theme, setTheme] = useState('dark'); // 'dark' or 'light'.
 
   const toggleTheme = () => {
-    setIsDarkMode(prevMode => !prevMode);
+    if (theme === 'dark') setTheme('light');
+    else if (theme === 'light') setTheme('dark');
+    else throw TypeError('Invalid theme. Use "dark" or "light".');
   };
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
