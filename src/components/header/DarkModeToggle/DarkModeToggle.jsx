@@ -11,7 +11,7 @@ export default function DarkModeToggle() {
   return (
     <div className={styles['dark-mode-toggle']}>
       <button
-        className={`${styles['mode-switcher']} ${theme ? '' : styles.active}`}
+        className={`${styles['mode-switcher']} ${theme === 'dark' ? '' : styles.active}`}
         onClick={toggleTheme}
       >
         <span className={styles['mode-switcher-main-body']}></span>

@@ -19,6 +19,18 @@ import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
 
 import '@/styles/global.scss';
 
+const themeScript = `
+function getTheme() {
+  const themeLocalStorage = localStorage.getItem('data-theme');
+
+  if(themeLocalStorage) return themeLocalStorage;
+
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+};
+
+document.documentElement.setAttribute('data-theme', getTheme());
+`;
+
 export const metadata = {
   title: {
     template: `%s | ${GITHUB_USER_NAME}`,
@@ -29,9 +41,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html lang="ko" data-theme="dark">
       <ThemeProvider>
         <Body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: themeScript,
+            }}
+          />
           <Header>
             <Title />
             <DarkModeToggle />
