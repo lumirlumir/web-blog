@@ -6,6 +6,8 @@
   }
 
   .mode-switcher {
+    @include props-animation-fade-in;
+
     /* variables */
     $light-color: var(--color-fg-default);
     $dark-color: var(--color-bg-inset);
