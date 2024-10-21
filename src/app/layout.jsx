@@ -10,6 +10,7 @@ import Categories from '@/components/aside/Categories';
 import Links from '@/components/aside/Links';
 import Profile from '@/components/aside/Profile/Profile';
 
+import DarkModeToggle from '@/components/header/DarkModeToggle';
 import Title from '@/components/header/Title';
 
 import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <Body>
         <Header>
           <Title />
+          <DarkModeToggle />
         </Header>
         <Aside>
           <Profile />
