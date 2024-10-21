@@ -1,21 +1,18 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '@/components/common/ThemeProvider';
 
 import styles from './DarkModeToggle.module.scss';
 
 export default function DarkModeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const onClick = () => {
-    setIsDarkMode(prevMode => !prevMode);
-  };
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className={styles['dark-mode-toggle']}>
       <button
         className={`${styles['mode-switcher']} ${isDarkMode ? '' : styles.active}`}
-        onClick={onClick}
+        onClick={toggleTheme}
       >
         <span className={styles['mode-switcher-main-body']}></span>
         <span className={styles['mode-switcher-shadow-shape']}></span>

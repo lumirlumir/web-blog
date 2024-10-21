@@ -1,6 +1,8 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
+import ThemeProvider from '@/components/common/ThemeProvider';
+
 import Aside from '@/components/layouts/Aside';
 import Body from '@/components/layouts/Body';
 import Header from '@/components/layouts/Header';
@@ -28,21 +30,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <Body>
-        <Header>
-          <Title />
-          <DarkModeToggle />
-        </Header>
-        <Aside>
-          <Profile />
-          <Links />
-          <Categories />
-        </Aside>
-        <Main>{children}</Main>
+      <ThemeProvider>
+        <Body>
+          <Header>
+            <Title />
+            <DarkModeToggle />
+          </Header>
+          <Aside>
+            <Profile />
+            <Links />
+            <Categories />
+          </Aside>
+          <Main>{children}</Main>
 
-        <Analytics />
-        <SpeedInsights />
-      </Body>
+          <Analytics />
+          <SpeedInsights />
+        </Body>
+      </ThemeProvider>
     </html>
   );
 }
