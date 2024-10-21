@@ -1,19 +1,35 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
+import ThemeProvider from '@/components/common/ThemeProvider';
+
 import Aside from '@/components/layouts/Aside';
 import Body from '@/components/layouts/Body';
 import Header from '@/components/layouts/Header';
 import Main from '@/components/layouts/Main';
 
 import Categories from '@/components/aside/Categories';
-import Home from '@/components/aside/Home';
+import Links from '@/components/aside/Links';
+import Profile from '@/components/aside/Profile/Profile';
 
+import DarkModeToggle from '@/components/header/DarkModeToggle';
 import Title from '@/components/header/Title';
 
 import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
 
-// TODO: import '@/styles/global.scss';
+import '@/styles/global.scss';
+
+const themeScript = `
+function getTheme() {
+  const themeLocalStorage = localStorage.getItem('data-theme');
+
+  if(themeLocalStorage) return themeLocalStorage;
+
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+};
+
+document.documentElement.setAttribute('data-theme', getTheme());
+`;
 
 export const metadata = {
   title: {
@@ -25,20 +41,29 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
-      <Body>
-        <Header>
-          <Title />
-        </Header>
-        <Aside>
-          <Home />
-          <Categories />
-        </Aside>
-        <Main>{children}</Main>
+    <html lang="ko" data-theme="dark">
+      <ThemeProvider>
+        <Body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: themeScript,
+            }}
+          />
+          <Header>
+            <Title />
+            <DarkModeToggle />
+          </Header>
+          <Aside>
+            <Profile />
+            <Links />
+            <Categories />
+          </Aside>
+          <Main>{children}</Main>
 
-        <Analytics />
-        <SpeedInsights />
-      </Body>
+          <Analytics />
+          <SpeedInsights />
+        </Body>
+      </ThemeProvider>
     </html>
   );
 }

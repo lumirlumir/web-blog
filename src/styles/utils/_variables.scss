@@ -1,0 +1,37 @@
+/* config */
+$config-base-not-pseudo-class-selector: '.markdown-body *';
+
+/* size */
+$size-4: 0.25rem;
+$size-8: 0.5rem;
+$size-16: 1rem;
+$size-24: 1.5rem;
+$size-40: 2.5rem;
+$size-border-radius: 6px;
+$size-header-height: 64px;
+$size-sidebar-width: 250px;
+
+/* text-weight */
+$text-weight-normal: 400;
+$text-weight-medium: 500;
+$text-weight-semibold: 600;
+
+/* font */
+$font-stack-system: // For general usage
+  -apple-system,
+  blinkmacsystemfont,
+  segoe ui,
+  noto sans,
+  helvetica,
+  arial,
+  sans-serif,
+  apple color emoji,
+  segoe ui emoji;
+$font-stack-monospace: // For markdown content
+  ui-monospace,
+  sfmono-regular,
+  sf mono,
+  menlo,
+  consolas,
+  liberation mono,
+  monospace;

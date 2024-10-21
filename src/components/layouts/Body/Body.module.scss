@@ -1,14 +1,19 @@
 .body {
+  @include selector-scrollbar-default;
+
   display: grid;
-  grid-template-rows: 80px 1fr;
-  grid-template-columns: 250px 1fr;
+  grid-template-rows: $size-header-height 1fr;
+  grid-template-columns: $size-sidebar-width 1fr;
+  font-family: $font-stack-system;
+  color: var(--color-fg-default);
+  background-color: var(--color-bg-inset);
 
   > header {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3;
   }
 
   > aside {
-    grid-area: 1 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 2;
   }
 
   > main {

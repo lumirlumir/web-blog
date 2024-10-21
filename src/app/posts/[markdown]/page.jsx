@@ -34,5 +34,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  return <>{await markdownToJsxFromPath(getFilePath(params))}</>;
+  return (
+    <div className="markdown-body">
+      {await markdownToJsxFromPath(getFilePath(params))}
+    </div>
+  );
 }

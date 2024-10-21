@@ -1,0 +1,30 @@
+.title {
+  @include props-flex-center;
+
+  margin: 4px;
+
+  > * {
+    padding: 0 8px;
+  }
+
+  > img {
+    border-radius: 50%;
+  }
+
+  > div {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+
+    > .user-name {
+      padding: 8px 0;
+      font-size: 20px; // 2fr
+      font-weight: $text-weight-semibold;
+    }
+
+    > .user-bio {
+      font-size: 10px; // 1fr
+      color: var(--color-fg-muted);
+      letter-spacing: -0.5px;
+    }
+  }
+}

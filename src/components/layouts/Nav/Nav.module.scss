@@ -1,7 +1,7 @@
 .nav {
   position: sticky;
-  top: 80px; // TODO: Header's height
+  top: $size-header-height;
   box-sizing: border-box;
-  height: calc(100vh - 80px); // TODO: 100vh - Header's height
+  height: calc(100vh - $size-header-height);
   padding: 45px 0;
 }
