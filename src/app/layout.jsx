@@ -16,17 +16,21 @@ import Profile from '@/components/aside/Profile/Profile';
 import DarkModeToggle from '@/components/header/DarkModeToggle';
 import Title from '@/components/header/Title';
 
-import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
+import { getGithubUsers } from '@/utils/fetch';
 
 import '@/styles/global.scss';
 
-export const metadata = {
-  title: {
-    template: `%s | ${GITHUB_USER_NAME}`,
-    default: GITHUB_USER_NAME,
-  },
-  description: GITHUB_USER_BIO,
-};
+export async function generateMetadata() {
+  const { bio, name } = await getGithubUsers();
+
+  return {
+    title: {
+      template: `%s | ${name}`,
+      default: name,
+    },
+    description: bio,
+  };
+}
 
 export default function RootLayout({ children }) {
   return (

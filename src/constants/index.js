@@ -1,14 +1,9 @@
 import { join } from 'path';
 
-// GitHub User, Ref: https://docs.github.com/en/rest/users/users
-export const GITHUB_USER_LOGIN = 'lumirlumir';
-export const GITHUB_USER_NAME = '루밀LuMir';
-export const GITHUB_USER_BIO = 'PLAY KEYBOARD, STRIKE A CODE🎨';
-export const GITHUB_USER_HTML_URL = `https://github.com/${GITHUB_USER_LOGIN}`;
-
 // GitHub Repository, Ref: https://docs.github.com/en/rest/repos/repos
+export const GITHUB_REPO_OWNER = 'lumirlumir';
 export const GITHUB_REPO_NAME = 'web-blog.lumir.page';
-export const GITHUB_REPO_FULL_NAME = `${GITHUB_USER_LOGIN}/${GITHUB_REPO_NAME}`;
+export const GITHUB_REPO_FULL_NAME = `${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}`;
 
 // Path
 export const PATH_DOCS = join(process.cwd(), 'src', 'posts', 'docs');

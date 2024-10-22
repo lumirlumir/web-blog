@@ -1,6 +1,9 @@
 import Article from '@/components/layouts/Article';
-import { GITHUB_USER_NAME } from '@/constants';
 
-export default function Page() {
-  return <Article>{`Hello, It's ${GITHUB_USER_NAME}'s blog!`}</Article>;
+import { getGithubUsers } from '@/utils/fetch';
+
+export default async function Page() {
+  const { name } = await getGithubUsers();
+
+  return <Article>{`Hello, It's ${name}'s blog!`}</Article>;
 }
