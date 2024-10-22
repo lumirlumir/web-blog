@@ -1,4 +1,4 @@
-@layer reset {
+@layer base {
   html:not(#{$config-base-not-pseudo-class-selector}),
   body:not(#{$config-base-not-pseudo-class-selector}),
   div:not(#{$config-base-not-pseudo-class-selector}),
