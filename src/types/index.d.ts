@@ -39,16 +39,26 @@ export type MarkdownDocumentDataTag =
   | 'html'
   | 'markdown'
   | 'css'
+  | 'cpp'
   | 'javascript'
   | 'nodejs'
   | 'npm'
   | 'react'
   | 'nextjs'
-  | 'convention'
+  | 'linux'
+  | 'data'
+  | 'database'
   | 'git'
   | 'vscode'
+  | 'openai'
   | 'baekjoon'
-  | 'cs';
+  | 'programmers'
+  | 'algorithm'
+  | 'network'
+  | 'convention'
+  | 'cs'
+  | 'synology'
+  | 'essay';
 
 /**
  * Metadata for `MarkdownDocument`'s `data`'s `tags`.
