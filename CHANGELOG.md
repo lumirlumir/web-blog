@@ -1,3 +1,3 @@
-# web-blog
+# blog.lumir.page
 
-See [Releases🎉](https://github.com/lumirlumir/web-blog/releases) and [Tags🏷️](https://github.com/lumirlumir/web-blog/tags) in GitHub.
+See [Releases🎉](https://github.com/lumirlumir/web-blog.lumir.page/releases) and [Tags🏷️](https://github.com/lumirlumir/web-blog.lumir.page/tags) in GitHub.
