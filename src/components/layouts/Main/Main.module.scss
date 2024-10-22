@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: 1fr 225px;
+  grid-template-columns: 1fr $size-nav-width;
 
   > article {
     grid-area: 1 / 1 / 2 / 2;
