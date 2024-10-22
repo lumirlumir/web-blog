@@ -1,5 +1,5 @@
 .body {
-  @include selector-scrollbar-default;
+  @include selector-scrollbar;
 
   display: grid;
   grid-template-rows: $size-header-height 1fr;

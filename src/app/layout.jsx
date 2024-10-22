@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import ThemeProvider from '@/components/common/ThemeProvider';
+import ThemeScript from '@/components/common/ThemeScript';
 
 import Aside from '@/components/layouts/Aside';
 import Body from '@/components/layouts/Body';
@@ -15,40 +16,29 @@ import Profile from '@/components/aside/Profile/Profile';
 import DarkModeToggle from '@/components/header/DarkModeToggle';
 import Title from '@/components/header/Title';
 
-import { GITHUB_USER_NAME, GITHUB_USER_BIO } from '@/constants';
+import { getGithubUsers } from '@/utils/fetch';
 
 import '@/styles/global.scss';
 
-const themeScript = `
-function getTheme() {
-  const themeLocalStorage = localStorage.getItem('data-theme');
+export async function generateMetadata() {
+  const { bio, name } = await getGithubUsers();
 
-  if(themeLocalStorage) return themeLocalStorage;
-
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-};
-
-document.documentElement.setAttribute('data-theme', getTheme());
-`;
-
-export const metadata = {
-  title: {
-    template: `%s | ${GITHUB_USER_NAME}`,
-    default: GITHUB_USER_NAME,
-  },
-  description: GITHUB_USER_BIO,
-};
+  return {
+    title: {
+      template: `%s | ${name}`,
+      default: name,
+    },
+    description: bio,
+  };
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ko" data-theme="dark">
       <ThemeProvider>
         <Body>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: themeScript,
-            }}
-          />
+          <ThemeScript />
+
           <Header>
             <Title />
             <DarkModeToggle />
