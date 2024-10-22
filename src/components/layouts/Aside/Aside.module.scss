@@ -1,5 +1,5 @@
 .aside {
-  @include selector-scrollbar;
+  @include selector-scrollbar(2px);
 
   position: sticky;
   top: $size-header-height;

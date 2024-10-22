@@ -5,6 +5,20 @@
   justify-content: center;
 }
 
+@mixin props-animation-fade-in {
+  animation: fade-in 0.6s ease-in-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 @mixin props-animation-shake {
   animation: shake 0.6s ease-in-out;
 
@@ -35,20 +49,6 @@
   }
 }
 
-@mixin props-animation-fade-in {
-  animation: 0.6s ease-in-out fade-in;
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
 /* selector */
 @mixin selector-hover-default {
   transition: all 0.3s ease-in-out;
@@ -59,25 +59,20 @@
   }
 }
 
-@mixin selector-scrollbar {
+@mixin selector-scrollbar($width: 4px) {
   overflow: hidden auto;
 
+  // Global usage: `*::webkit-scrollbar`.
   &::-webkit-scrollbar {
-    // Global usage: `*::webkit-scrollbar`.
-    display: none;
-  }
-}
+    @if $width == 0 {
+      display: none;
+    } @else {
+      width: $width;
 
-@mixin selector-scrollbar-default {
-  overflow: hidden auto;
-
-  // chrome edge safari
-  &::-webkit-scrollbar {
-    width: 4px;
-
-    &-thumb {
-      background-color: var(--color-border-default);
-      border-radius: $size-border-radius;
+      &-thumb {
+        background-color: var(--color-border-default);
+        border-radius: $size-border-radius;
+      }
     }
   }
 }
